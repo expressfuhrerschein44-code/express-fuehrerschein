@@ -1,0 +1,175 @@
+{
+  "topicSlug": "zusatz-l-technik-sicherung",
+  "lessons": [
+    {
+      "slug": "zusatz-l-technik-sicherung-grundlagen",
+      "sortOrder": 1,
+      "status": "draft",
+      "estimatedDurationMinutes": 12,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Technik und Sicherungseinrichtungen – Grundlagen",
+          "description": "Grundwissen und Sicherheitsprinzipien für Technik und Sicherungseinrichtungen."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Lernziel",
+              "bodyText": "Betriebs-, Druckluft-, Auflauf- und Feststellbremsen, Lenkung, Räder, Anbaugeräte, Achslasten, Betriebsgeschwindigkeit und Ladung.",
+              "content": {
+                "bullets": [
+                  "Bremsen, Lenkung, Reifen und Verbindungseinrichtungen vor Fahrtbeginn kontrollieren.",
+                  "Anbaugeräte und Ladung gegen unbeabsichtigte Bewegung sichern und Achslasten beachten.",
+                  "Betriebsgeschwindigkeit an Fahrzeug, Anhänger, Straße und Ladung anpassen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "INFO",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Merke",
+              "bodyText": "Bremsen, Lenkung, Reifen und Verbindungseinrichtungen vor Fahrtbeginn kontrollieren.",
+              "content": {
+                "bullets": [
+                  "Anbaugeräte und Ladung gegen unbeabsichtigte Bewegung sichern und Achslasten beachten.",
+                  "Betriebsgeschwindigkeit an Fahrzeug, Anhänger, Straße und Ladung anpassen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "EXAMPLE",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Praxisbezug",
+              "bodyText": "Übertragen Sie die Regeln auf eine konkrete Verkehrssituation: zuerst beobachten, Risiken erkennen, Sicherheitsreserve schaffen und erst danach handeln.",
+              "content": {
+                "checklist": [
+                  "Umfeld beobachten",
+                  "Risiko einschätzen",
+                  "Geschwindigkeit und Abstand anpassen",
+                  "Entscheidung kontrolliert ausführen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-T-14-Q001",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Wissenscheck",
+              "bodyText": "Beantworten Sie die Frage, bevor Sie mit der nächsten Lektion fortfahren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zusatz-l-technik-sicherung-anwendung",
+      "sortOrder": 2,
+      "status": "draft",
+      "estimatedDurationMinutes": 14,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Technik und Sicherungseinrichtungen – Anwendung und Risiken",
+          "description": "Typische Risiken erkennen und Entscheidungen zum Themenbereich Technik und Sicherungseinrichtungen sicher anwenden."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Sicher anwenden",
+              "bodyText": "Regelwissen ist nur dann wirksam, wenn es frühzeitig in Beobachtung und Fahrentscheidung einfließt.",
+              "content": {
+                "bullets": [
+                  "Bremsen, Lenkung, Reifen und Verbindungseinrichtungen vor Fahrtbeginn kontrollieren.",
+                  "Anbaugeräte und Ladung gegen unbeabsichtigte Bewegung sichern und Achslasten beachten.",
+                  "Betriebsgeschwindigkeit an Fahrzeug, Anhänger, Straße und Ladung anpassen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "WARNING",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Typischer Fehler",
+              "bodyText": "Nicht erst reagieren, wenn die Gefahr unmittelbar ist. Zu spätes Erkennen reduziert Brems-, Ausweich- und Entscheidungsreserven.",
+              "content": {
+                "avoid": [
+                  "Unaufmerksamkeit",
+                  "Zeitdruck",
+                  "zu geringe Sicherheitsreserve",
+                  "unkontrollierte spontane Manöver"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "TIP",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Prüfungs- und Praxistipp",
+              "bodyText": "Fragen Sie sich vor einer Entscheidung: Was sehe ich? Was könnte passieren? Welche Reserve brauche ich? Welche Handlung ist für alle Beteiligten am sichersten?"
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-T-14-Q004",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Situationscheck",
+              "bodyText": "Wählen Sie die sicherste Vorgehensweise."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

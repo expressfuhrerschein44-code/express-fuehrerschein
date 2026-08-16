@@ -1,0 +1,175 @@
+{
+  "topicSlug": "zusatz-t-fahrphysik",
+  "lessons": [
+    {
+      "slug": "zusatz-t-fahrphysik-grundlagen",
+      "sortOrder": 1,
+      "status": "draft",
+      "estimatedDurationMinutes": 12,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Wirkung von Kräften beim Fahren – Grundlagen",
+          "description": "Grundwissen und Sicherheitsprinzipien für Wirkung von Kräften beim Fahren."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Lernziel",
+              "bodyText": "Kraftschluss, Reibung, Roll- und Luftwiderstand, Ladung, Steigungen, Gefälle, Seitenführung, Fliehkraft und Kippmomente.",
+              "content": {
+                "bullets": [
+                  "Schwerpunkt und Ladungsverteilung bestimmen wesentlich die Kippstabilität.",
+                  "In Kurven und am Hang Geschwindigkeit früh reduzieren und abrupte Lenkbewegungen vermeiden.",
+                  "Bodenhaftung und Zugkraft verändern sich mit Untergrund, Bereifung, Last und Antrieb."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "INFO",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Merke",
+              "bodyText": "Schwerpunkt und Ladungsverteilung bestimmen wesentlich die Kippstabilität.",
+              "content": {
+                "bullets": [
+                  "In Kurven und am Hang Geschwindigkeit früh reduzieren und abrupte Lenkbewegungen vermeiden.",
+                  "Bodenhaftung und Zugkraft verändern sich mit Untergrund, Bereifung, Last und Antrieb."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "EXAMPLE",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Praxisbezug",
+              "bodyText": "Übertragen Sie die Regeln auf eine konkrete Verkehrssituation: zuerst beobachten, Risiken erkennen, Sicherheitsreserve schaffen und erst danach handeln.",
+              "content": {
+                "checklist": [
+                  "Umfeld beobachten",
+                  "Risiko einschätzen",
+                  "Geschwindigkeit und Abstand anpassen",
+                  "Entscheidung kontrolliert ausführen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-T-16-Q001",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Wissenscheck",
+              "bodyText": "Beantworten Sie die Frage, bevor Sie mit der nächsten Lektion fortfahren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zusatz-t-fahrphysik-anwendung",
+      "sortOrder": 2,
+      "status": "draft",
+      "estimatedDurationMinutes": 14,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Wirkung von Kräften beim Fahren – Anwendung und Risiken",
+          "description": "Typische Risiken erkennen und Entscheidungen zum Themenbereich Wirkung von Kräften beim Fahren sicher anwenden."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Sicher anwenden",
+              "bodyText": "Regelwissen ist nur dann wirksam, wenn es frühzeitig in Beobachtung und Fahrentscheidung einfließt.",
+              "content": {
+                "bullets": [
+                  "Schwerpunkt und Ladungsverteilung bestimmen wesentlich die Kippstabilität.",
+                  "In Kurven und am Hang Geschwindigkeit früh reduzieren und abrupte Lenkbewegungen vermeiden.",
+                  "Bodenhaftung und Zugkraft verändern sich mit Untergrund, Bereifung, Last und Antrieb."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "WARNING",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Typischer Fehler",
+              "bodyText": "Nicht erst reagieren, wenn die Gefahr unmittelbar ist. Zu spätes Erkennen reduziert Brems-, Ausweich- und Entscheidungsreserven.",
+              "content": {
+                "avoid": [
+                  "Unaufmerksamkeit",
+                  "Zeitdruck",
+                  "zu geringe Sicherheitsreserve",
+                  "unkontrollierte spontane Manöver"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "TIP",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Prüfungs- und Praxistipp",
+              "bodyText": "Fragen Sie sich vor einer Entscheidung: Was sehe ich? Was könnte passieren? Welche Reserve brauche ich? Welche Handlung ist für alle Beteiligten am sichersten?"
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-T-16-Q004",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Situationscheck",
+              "bodyText": "Wählen Sie die sicherste Vorgehensweise."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

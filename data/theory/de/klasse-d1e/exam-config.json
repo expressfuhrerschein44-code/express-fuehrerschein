@@ -1,0 +1,15 @@
+{
+  "version": "2026.08-training-draft",
+  "questionCount": 20,
+  "durationSeconds": 1800,
+  "scoringMethod": "training_only",
+  "passingRule": {
+    "minimumScorePercent": 80,
+    "officialTheoryExamRequired": false,
+    "trainingOnly": true,
+    "durationIsPlatformTrainingWindow": true
+  },
+  "status": "draft",
+  "activeFrom": null,
+  "activeUntil": null
+}

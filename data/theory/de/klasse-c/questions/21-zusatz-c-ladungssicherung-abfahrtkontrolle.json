@@ -1,0 +1,185 @@
+{
+  "topicSlug": "zusatz-c-ladungssicherung-abfahrtkontrolle",
+  "questions": [
+    {
+      "externalRef": "DE-C-21-Q001",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 3,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Welche Aussage beschreibt einen wichtigen Sicherheitsgrundsatz im Themenbereich „Ladungssicherung und Abfahrtkontrolle“?",
+          "explanation": "Zum Themenbereich „Ladungssicherung und Abfahrtkontrolle“ gehört vor allem: Ladung gegen Verrutschen, Rollen, Umfallen, Herabfallen und vermeidbare Schwerpunktverlagerung sichern.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Ladung gegen Verrutschen, Rollen, Umfallen, Herabfallen und vermeidbare Schwerpunktverlagerung sichern."
+            },
+            {
+              "id": "b",
+              "text": "Die Situation erst beachten, wenn bereits eine konkrete Gefahr entstanden ist."
+            },
+            {
+              "id": "c",
+              "text": "Regeln können ignoriert werden, wenn man sich persönlich sicher fühlt."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-C-21-Q002",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 4,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Was unterstützt beim Thema „Ladungssicherung und Abfahrtkontrolle“ eine sichere und vorausschauende Entscheidung?",
+          "explanation": "Zum Themenbereich „Ladungssicherung und Abfahrtkontrolle“ gehört vor allem: Sicherungsmittel passend zu Ladung, Fahrzeug und auftretenden Kräften auswählen.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Sicherungsmittel passend zu Ladung, Fahrzeug und auftretenden Kräften auswählen."
+            },
+            {
+              "id": "b",
+              "text": "Möglichst spät reagieren, damit der Verkehrsfluss nicht beeinträchtigt wird."
+            },
+            {
+              "id": "c",
+              "text": "Sicherheitsreserven nur dann einplanen, wenn andere Verkehrsteilnehmer Fehler machen."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-C-21-Q003",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 3,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Welche Aussage zum Themenbereich „Ladungssicherung und Abfahrtkontrolle“ ist richtig?",
+          "explanation": "Zum Themenbereich „Ladungssicherung und Abfahrtkontrolle“ gehört vor allem: Vor Abfahrt Fahrzeug, Ladung, Bremsen, Reifen, Beleuchtung und Ausrüstung systematisch kontrollieren.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Vor Abfahrt Fahrzeug, Ladung, Bremsen, Reifen, Beleuchtung und Ausrüstung systematisch kontrollieren."
+            },
+            {
+              "id": "b",
+              "text": "Technische oder rechtliche Vorgaben sind für die praktische Fahrentscheidung ohne Bedeutung."
+            },
+            {
+              "id": "c",
+              "text": "Eine hohe eigene Fahrerfahrung macht systematische Kontrollen grundsätzlich überflüssig."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-C-21-Q004",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 5,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "hard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Sie erkennen während der Fahrt eine unübersichtliche oder unsichere Situation zum Thema „Ladungssicherung und Abfahrtkontrolle“. Wie handeln Sie grundsätzlich richtig?",
+          "explanation": "In unklaren Situationen sind frühe Beobachtung, angepasste Geschwindigkeit und ausreichende Sicherheitsreserven entscheidend.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Situation beobachten, Geschwindigkeit anpassen und nur mit ausreichender Sicherheitsreserve weiterfahren."
+            },
+            {
+              "id": "b",
+              "text": "Geschwindigkeit erhöhen, um den Gefahrenbereich schneller zu verlassen."
+            },
+            {
+              "id": "c",
+              "text": "Unverändert weiterfahren, solange noch kein anderer Verkehrsteilnehmer reagiert."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-C-21-Q005",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 4,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Was sollten Sie beim Themenbereich „Ladungssicherung und Abfahrtkontrolle“ besonders vermeiden?",
+          "explanation": "Sicheres Fahren verlangt eine ausreichende Beobachtung und Reserve. Spontane Entscheidungen ohne Überblick erhöhen das Risiko.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Entscheidungen ohne ausreichende Beobachtung oder Sicherheitsreserve."
+            },
+            {
+              "id": "b",
+              "text": "Frühzeitiges Erkennen möglicher Gefahren."
+            },
+            {
+              "id": "c",
+              "text": "Anpassen der Fahrweise an die tatsächliche Situation."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-C-21-Q006",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 2,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "easy",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Warum ist der Themenbereich „Ladungssicherung und Abfahrtkontrolle“ für die Fahrausbildung wichtig?",
+          "explanation": "Der Stoff dient dem Aufbau von Regelwissen, Gefahrenbewusstsein und sicherem Handeln im Straßenverkehr.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Weil Fehler in diesem Bereich die Verkehrssicherheit beeinträchtigen können."
+            },
+            {
+              "id": "b",
+              "text": "Weil dieser Bereich ausschließlich für die Fahrzeugpflege wichtig ist."
+            },
+            {
+              "id": "c",
+              "text": "Weil dieser Bereich nur nach bestandener Prüfung eine Rolle spielt."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": "2026.08-draft",
+  "questionCount": 30,
+  "durationSeconds": 2700,
+  "scoringMethod": "penalty_points",
+  "passingRule": {
+    "requireAllAnswered": false,
+    "maximumPenaltyPoints": 10,
+    "failOnTwoFivePointErrors": true,
+    "questionPointTotal": 105,
+    "officialVariant": "Erweiterung",
+    "durationIsPlatformTrainingWindow": true
+  },
+  "status": "draft",
+  "activeFrom": null,
+  "activeUntil": null
+}

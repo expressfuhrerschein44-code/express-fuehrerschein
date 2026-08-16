@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "locale": "fr",
+    "languageName": "Français",
+    "htmlLang": "fr",
+    "direction": "ltr"
+  },
+  "seo": {
+    "home": {
+      "title": "Express-Führerschein | Préparation au permis simple et digitale",
+      "description": "Préparez votre permis de manière structurée, rapide et sûre grâce au plan d’apprentissage, aux entraînements, aux examens blancs et à l’accompagnement personnalisé.",
+      "ogTitle": "Express-Führerschein",
+      "ogDescription": "Votre plateforme digitale pour une préparation structurée au permis de conduire."
+    }
+  },
+  "common": {
+    "brand": "Express-Führerschein",
+    "startNow": "Commencer maintenant",
+    "learnMore": "En savoir plus",
+    "viewAll": "Tout afficher",
+    "continue": "Continuer",
+    "back": "Retour",
+    "close": "Fermer",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "selectLanguage": "Choisir la langue",
+    "currentLanguage": "Langue actuelle",
+    "loading": "Chargement…",
+    "error": "Une erreur est survenue.",
+    "retry": "Réessayer"
+  },
+  "navigation": {
+    "licenseClasses": "Catégories de permis",
+    "process": "Fonctionnement",
+    "benefits": "Avantages",
+    "about": "À propos",
+    "reviews": "Avis",
+    "faq": "FAQ",
+    "language": "FR",
+    "start": "Commencer"
+  },
+  "home": {
+    "hero": {
+      "badge": "LA PLATEFORME EN LIGNE DE RÉFÉRENCE EN ALLEMAGNE",
+      "title": "Votre permis.",
+      "highlight": "Rapide. Sûr. En 21 jours.",
+      "description": "La préparation complète à l’examen théorique – structurée, efficace et fiable.",
+      "benefits": {
+        "allClasses": "Toutes les catégories",
+        "online": "100% en ligne",
+        "verifiedContent": "Contenus vérifiés",
+        "personalSupport": "Accompagnement personnalisé"
+      },
+      "primaryCta": "Commencer maintenant",
+      "secondaryCta": "En savoir plus",
+      "primaryCtaAria": "Commencer avec Express-Führerschein",
+      "secondaryCtaAria": "En savoir plus sur Express-Führerschein"
+    },
+    "trust": {
+      "title": "La confiance grâce à une qualité vérifiée",
+      "dekra": {
+        "name": "DEKRA",
+        "label": "Qualité vérifiée"
+      },
+      "tuev": {
+        "name": "TÜV",
+        "label": "Certifié TÜV"
+      },
+      "kba": {
+        "name": "KBA",
+        "label": "Reconnu par le KBA"
+      },
+      "trustpilot": {
+        "name": "Trustpilot",
+        "rating": "4,8/5",
+        "reviews": "2 500+ avis"
+      }
+    },
+    "stats": {
+      "participants": {
+        "value": "250 000+",
+        "label": "Participants accompagnés"
+      },
+      "duration": {
+        "value": "21 jours",
+        "label": "Durée moyenne"
+      },
+      "successRate": {
+        "value": "98%",
+        "label": "Taux de réussite"
+      },
+      "support": {
+        "value": "7 jours / semaine",
+        "label": "Support personnalisé"
+      }
+    },
+    "licenseClasses": {
+      "eyebrow": "CATÉGORIES DE PERMIS",
+      "title": "Choisissez votre catégorie de permis",
+      "subtitle": "Toutes les catégories – une seule plateforme",
+      "viewAll": "Voir toutes les catégories",
+      "selected": "Sélectionné"
+    },
+    "whyExpress": {
+      "eyebrow": "VOS AVANTAGES",
+      "title": "Pourquoi Express-Führerschein ?",
+      "items": {
+        "online": {
+          "title": "100% en ligne",
+          "description": "Apprenez librement où que vous soyez."
+        },
+        "guarantee": {
+          "title": "Garantie examen",
+          "description": "Une préparation claire jusqu’au jour de l’examen."
+        },
+        "certifiedContent": {
+          "title": "Contenus certifiés",
+          "description": "Des contenus actuels et pertinents."
+        },
+        "securePayment": {
+          "title": "Paiement sécurisé",
+          "description": "Des paiements protégés et transparents."
+        },
+        "personalSupport": {
+          "title": "Support personnalisé",
+          "description": "Un accompagnement pendant votre préparation."
+        }
+      }
+    },
+    "program21": {
+      "eyebrow": "PROGRAMME 21 JOURS",
+      "title": "Votre parcours en 21 jours",
+      "subtitle": "Un plan d’apprentissage clairement structuré pour votre préparation.",
+      "phases": {
+        "phase1": {
+          "days": "Jours 1–7",
+          "title": "Apprendre les bases",
+          "description": "Bases, règles, panneaux de signalisation et notions essentielles."
+        },
+        "phase2": {
+          "days": "Jours 8–14",
+          "title": "S’entraîner intensivement",
+          "description": "Questions, exercices et révision ciblée de vos erreurs."
+        },
+        "phase3": {
+          "days": "Jours 15–21",
+          "title": "Être prêt pour l’examen",
+          "description": "Examens blancs, révisions ciblées et préparation finale."
+        }
+      },
+      "cta": "Commencer le programme 21 jours"
+    },
+    "howItWorks": {
+      "eyebrow": "COMMENT ÇA MARCHE",
+      "title": "Commencez simplement. Apprenez avec méthode.",
+      "subtitle": "Quatre étapes claires pour votre préparation.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Choisir la catégorie",
+          "description": "Choisissez la catégorie correspondant à votre permis."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Créer un compte",
+          "description": "Inscrivez-vous en quelques étapes."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Apprendre & s’entraîner",
+          "description": "Suivez votre plan et entraînez-vous de manière ciblée."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Préparer l’examen",
+          "description": "Évaluez votre niveau grâce à des examens blancs réalistes."
+        }
+      }
+    },
+    "security": {
+      "eyebrow": "SÉCURITÉ",
+      "title": "Sûr. Transparent. Fiable.",
+      "subtitle": "Vos données et vos paiements sont protégés de manière professionnelle.",
+      "items": {
+        "gdpr": {
+          "title": "Conforme au RGPD",
+          "description": "Protection des données selon les standards européens."
+        },
+        "ssl": {
+          "title": "Chiffrement SSL",
+          "description": "Transmission sécurisée de vos données."
+        },
+        "payments": {
+          "title": "Paiements sécurisés",
+          "description": "Traitement protégé des paiements."
+        },
+        "privacy": {
+          "title": "Protection des données",
+          "description": "Gestion transparente de vos données."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "AVIS",
+      "title": "Ce que disent nos participants",
+      "subtitle": "Les expériences des participants avec Express-Führerschein.",
+      "viewAll": "Voir tous les avis",
+      "empty": "Aucun avis n’est disponible actuellement.",
+      "verified": "Avis vérifié",
+      "licenseClass": "Catégorie de permis",
+      "country": "Pays"
+    },
+    "countries": {
+      "eyebrow": "EUROPE",
+      "title": "Express-Führerschein en Europe",
+      "subtitle": "Une plateforme – adaptée à chaque pays.",
+      "primaryMarket": "Marché principal"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Les réponses essentielles en un coup d’œil.",
+      "items": {
+        "program": {
+          "question": "Comment fonctionne le programme 21 jours ?",
+          "answer": "Vous recevez un plan structuré avec des activités quotidiennes d’apprentissage, d’entraînement et de révision."
+        },
+        "classes": {
+          "question": "Quelles catégories de permis sont disponibles ?",
+          "answer": "Express-Führerschein est conçu pour plusieurs catégories. Les catégories disponibles dépendent du pays sélectionné."
+        },
+        "mobile": {
+          "question": "Puis-je apprendre sur smartphone ?",
+          "answer": "Oui. La plateforme est optimisée pour smartphone, tablette et ordinateur."
+        },
+        "languages": {
+          "question": "Quelles langues sont prises en charge ?",
+          "answer": "La plateforme est prévue en allemand, français, néerlandais, espagnol, italien et anglais."
+        },
+        "exams": {
+          "question": "Comment fonctionnent les examens blancs ?",
+          "answer": "Vous pouvez évaluer vos connaissances avec des simulations puis retravailler précisément vos erreurs."
+        },
+        "support": {
+          "question": "Comment obtenir de l’aide ?",
+          "answer": "Le support personnalisé vous accompagne pendant votre préparation et répond à vos questions sur la plateforme."
+        }
+      },
+      "viewAll": "Voir toutes les questions"
+    },
+    "finalCta": {
+      "title": "Prêt pour votre permis ?",
+      "subtitle": "Commencez maintenant votre préparation avec Express-Führerschein.",
+      "button": "Commencer maintenant",
+      "note": "Inscription en quelques minutes."
+    }
+  },
+  "licenseClasses": {
+    "B": {
+      "name": "Catégorie B",
+      "shortName": "B",
+      "vehicle": "Voiture",
+      "imageAlt": "Voiture pour la catégorie de permis B"
+    },
+    "A": {
+      "name": "Catégorie A",
+      "shortName": "A",
+      "vehicle": "Moto",
+      "imageAlt": "Moto pour la catégorie de permis A"
+    },
+    "C": {
+      "name": "Catégorie C",
+      "shortName": "C",
+      "vehicle": "Camion",
+      "imageAlt": "Camion pour la catégorie de permis C"
+    },
+    "D": {
+      "name": "Catégorie D",
+      "shortName": "D",
+      "vehicle": "Bus",
+      "imageAlt": "Bus pour la catégorie de permis D"
+    },
+    "BE": {
+      "name": "Catégorie BE",
+      "shortName": "BE",
+      "vehicle": "Remorque",
+      "imageAlt": "Voiture avec remorque pour la catégorie de permis BE"
+    },
+    "AM": {
+      "name": "Catégorie AM",
+      "shortName": "AM",
+      "vehicle": "Scooter",
+      "imageAlt": "Scooter pour la catégorie de permis AM"
+    }
+  },
+  "countries": {
+    "DE": {
+      "name": "Allemagne",
+      "flag": "🇩🇪"
+    },
+    "AT": {
+      "name": "Autriche",
+      "flag": "🇦🇹"
+    },
+    "CH": {
+      "name": "Suisse",
+      "flag": "🇨🇭"
+    },
+    "BE": {
+      "name": "Belgique",
+      "flag": "🇧🇪"
+    },
+    "ES": {
+      "name": "Espagne",
+      "flag": "🇪🇸"
+    }
+  },
+  "footer": {
+    "brandDescription": "Votre plateforme digitale pour une préparation structurée au permis de conduire.",
+    "columns": {
+      "platform": {
+        "title": "Plateforme",
+        "licenseClasses": "Catégories de permis",
+        "learning": "Apprentissage",
+        "examTraining": "Entraînement examen",
+        "program21": "Programme 21 jours"
+      },
+      "company": {
+        "title": "Entreprise",
+        "about": "À propos",
+        "contact": "Contact",
+        "reviews": "Avis",
+        "faq": "FAQ"
+      },
+      "legal": {
+        "title": "Mentions légales",
+        "imprint": "Impressum",
+        "privacy": "Confidentialité",
+        "terms": "CGV",
+        "withdrawal": "Droit de rétractation",
+        "cookies": "Paramètres des cookies"
+      },
+      "countries": {
+        "title": "Pays",
+        "germany": "Allemagne",
+        "austria": "Autriche",
+        "switzerland": "Suisse",
+        "belgium": "Belgique",
+        "spain": "Espagne"
+      }
+    },
+    "copyright": "© Express-Führerschein. Tous droits réservés."
+  }
+}

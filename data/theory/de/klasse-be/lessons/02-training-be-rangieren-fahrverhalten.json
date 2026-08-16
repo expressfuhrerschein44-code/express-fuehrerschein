@@ -1,0 +1,175 @@
+{
+  "topicSlug": "training-be-rangieren-fahrverhalten",
+  "lessons": [
+    {
+      "slug": "training-be-rangieren-fahrverhalten-grundlagen",
+      "sortOrder": 1,
+      "status": "draft",
+      "estimatedDurationMinutes": 12,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "BE – Rangieren und Fahrverhalten – Grundlagen",
+          "description": "Grundwissen und Sicherheitsprinzipien für BE – Rangieren und Fahrverhalten."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Lernziel",
+              "bodyText": "Vertiefendes Training zu Rückwärtsfahren, Rangieren, Kurvenlauf, Ausschwenken und angepasster Fahrweise mit Anhänger.",
+              "content": {
+                "bullets": [
+                  "Rangierbewegungen langsam, planvoll und mit vollständiger Umfeldbeobachtung durchführen.",
+                  "Kurvenlauf und Ausschwenken der Kombination früh berücksichtigen.",
+                  "Geschwindigkeit und Abstand an größere Masse und verlängerten Bremsweg anpassen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "INFO",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Merke",
+              "bodyText": "Rangierbewegungen langsam, planvoll und mit vollständiger Umfeldbeobachtung durchführen.",
+              "content": {
+                "bullets": [
+                  "Kurvenlauf und Ausschwenken der Kombination früh berücksichtigen.",
+                  "Geschwindigkeit und Abstand an größere Masse und verlängerten Bremsweg anpassen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "EXAMPLE",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Praxisbezug",
+              "bodyText": "Übertragen Sie die Regeln auf eine konkrete Verkehrssituation: zuerst beobachten, Risiken erkennen, Sicherheitsreserve schaffen und erst danach handeln.",
+              "content": {
+                "checklist": [
+                  "Umfeld beobachten",
+                  "Risiko einschätzen",
+                  "Geschwindigkeit und Abstand anpassen",
+                  "Entscheidung kontrolliert ausführen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-BE-02-Q001",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Wissenscheck",
+              "bodyText": "Beantworten Sie die Frage, bevor Sie mit der nächsten Lektion fortfahren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "training-be-rangieren-fahrverhalten-anwendung",
+      "sortOrder": 2,
+      "status": "draft",
+      "estimatedDurationMinutes": 14,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "BE – Rangieren und Fahrverhalten – Anwendung und Risiken",
+          "description": "Typische Risiken erkennen und Entscheidungen zum Themenbereich BE – Rangieren und Fahrverhalten sicher anwenden."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Sicher anwenden",
+              "bodyText": "Regelwissen ist nur dann wirksam, wenn es frühzeitig in Beobachtung und Fahrentscheidung einfließt.",
+              "content": {
+                "bullets": [
+                  "Rangierbewegungen langsam, planvoll und mit vollständiger Umfeldbeobachtung durchführen.",
+                  "Kurvenlauf und Ausschwenken der Kombination früh berücksichtigen.",
+                  "Geschwindigkeit und Abstand an größere Masse und verlängerten Bremsweg anpassen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "WARNING",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Typischer Fehler",
+              "bodyText": "Nicht erst reagieren, wenn die Gefahr unmittelbar ist. Zu spätes Erkennen reduziert Brems-, Ausweich- und Entscheidungsreserven.",
+              "content": {
+                "avoid": [
+                  "Unaufmerksamkeit",
+                  "Zeitdruck",
+                  "zu geringe Sicherheitsreserve",
+                  "unkontrollierte spontane Manöver"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "TIP",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Prüfungs- und Praxistipp",
+              "bodyText": "Fragen Sie sich vor einer Entscheidung: Was sehe ich? Was könnte passieren? Welche Reserve brauche ich? Welche Handlung ist für alle Beteiligten am sichersten?"
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-BE-02-Q004",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Situationscheck",
+              "bodyText": "Wählen Sie die sicherste Vorgehensweise."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

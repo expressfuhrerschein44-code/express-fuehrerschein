@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "grundstoff-persoenliche-voraussetzungen",
+    "sortOrder": 1,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Persönliche Voraussetzungen",
+        "description": "Körperliche, psychische und soziale Voraussetzungen für sicheres Fahren sowie der Einfluss von Gesundheit, Aufmerksamkeit, Alkohol, Drogen, Medikamenten, Müdigkeit und Ablenkung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-risikofaktor-mensch",
+    "sortOrder": 2,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Risikofaktor Mensch",
+        "description": "Einfluss von Stress, Angst, Aggression, Fahrfreude, Selbstüberschätzung und anderen Emotionen auf Entscheidungen im Straßenverkehr."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-rechtliche-rahmenbedingungen",
+    "sortOrder": 3,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Rechtliche Rahmenbedingungen",
+        "description": "Grundlagen zu Fahrerlaubnis, Fahrzeugzulassung, Untersuchungen, Versicherungen, Fahrzeugpapieren und internationalem Kraftfahrzeugverkehr."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-strassenverkehrssystem",
+    "sortOrder": 4,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Straßenverkehrssystem und seine Nutzung",
+        "description": "Verkehrswege, Fahrbahnen, Fahrstreifen, Sonderwege, Autobahnen, Kraftfahrstraßen, Grundregeln und systematische Gefahrenwahrnehmung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-vorfahrt-verkehrsregelungen",
+    "sortOrder": 5,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Vorfahrt und Verkehrsregelungen",
+        "description": "Sicheres Verhalten an Kreuzungen und Einmündungen sowie bei Lichtzeichen, Polizeizeichen und besonderen Verkehrslagen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-verkehrszeichen-bahnuebergaenge",
+    "sortOrder": 6,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Verkehrszeichen, Verkehrseinrichtungen und Bahnübergänge",
+        "description": "Systematik von Gefahrzeichen, Vorschriftzeichen, Richtzeichen, Zusatzzeichen und Verkehrseinrichtungen sowie sicheres Verhalten an Bahnübergängen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-andere-verkehrsteilnehmer",
+    "sortOrder": 7,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Andere Verkehrsteilnehmer",
+        "description": "Besonderheiten im Umgang mit öffentlichen Verkehrsmitteln, Bussen, Motorrädern, Radfahrern, schweren Fahrzeugen, Fußgängern, Kindern, älteren Menschen und Menschen mit Behinderung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-geschwindigkeit-abstand-umwelt",
+    "sortOrder": 8,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Geschwindigkeit, Abstand und umweltschonende Fahrweise",
+        "description": "Angepasste Geschwindigkeit, Sicherheitsabstand, Anhalteweg, Geschwindigkeitsvorschriften, vorausschauendes Fahren sowie Lärm-, Umwelt- und Energieaspekte."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-fahrmanoever-verkehrsbeobachtung",
+    "sortOrder": 9,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrmanöver und Verkehrsbeobachtung",
+        "description": "Einfahren, Anfahren, Überholen, Vorbeifahren, Ausweichen, Nebeneinanderfahren, Abbiegen, Wenden und Rückwärtsfahren."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-ruhender-verkehr",
+    "sortOrder": 10,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Ruhender Verkehr",
+        "description": "Halten, Parken, Ein- und Aussteigen, Fahrzeugsicherung sowie Absichern, Anschleppen, Abschleppen und Schleppen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-besondere-situationen-verstoesse",
+    "sortOrder": 11,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Besondere Situationen und Folgen von Verstößen",
+        "description": "Beleuchtung, Sonderfahrzeuge, Verhalten nach Unfällen, Hilfeleistung, Sanktionen, Fahreignung, Fahrerlaubnisentzug und mögliche Folgen für den Versicherungsschutz."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-lebenslanges-lernen",
+    "sortOrder": 12,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Lebenslanges Lernen",
+        "description": "Besondere Risiken von Fahranfängern, jungen und älteren Fahrern sowie Möglichkeiten zur Weiterbildung, Verhaltensverbesserung und umweltschonenden Fahrweise."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-l-verkehr-zuege",
+    "sortOrder": 13,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Verkehrsbeobachtung und Zusammenstellen von Zügen",
+        "description": "Einfahren, Überqueren, Abbiegen, Beobachtung nach hinten, Fahrbahnbenutzung, Kolonnenbildung, Zugbildung, Kennzeichnung und fahrzeugbezogene Vorschriften."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-l-technik-sicherung",
+    "sortOrder": 14,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Technik und Sicherungseinrichtungen",
+        "description": "Betriebs-, Druckluft-, Auflauf- und Feststellbremsen, Lenkung, Räder, Anbaugeräte, Achslasten, Betriebsgeschwindigkeit und Ladung."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-t-fahren-zuege",
+    "sortOrder": 15,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahren mit Zügen",
+        "description": "Ladungssicherung, Fahrbahnbenutzung mit Anhängern, land- oder forstwirtschaftliche Güter, Allradantrieb und Verhalten an Bahnübergängen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-t-fahrphysik",
+    "sortOrder": 16,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Wirkung von Kräften beim Fahren",
+        "description": "Kraftschluss, Reibung, Roll- und Luftwiderstand, Ladung, Steigungen, Gefälle, Seitenführung, Fliehkraft und Kippmomente."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-t-bremsanlagen",
+    "sortOrder": 17,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Bremsanlagen",
+        "description": "Druckluftversorgung, kombinierte Druckluft-hydraulische Systeme und Zweileitungsbremsen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-t-anhaengerbremsen",
+    "sortOrder": 18,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Bremsanlagen des Anhängers",
+        "description": "Bremskraftregler, lastabhängige Bremskraftregelung, Hilfs- und Feststellbremsen sowie Beleuchtungseinrichtungen am Anhänger."
+      }
+    ]
+  }
+]

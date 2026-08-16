@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "locale": "en",
+    "languageName": "English",
+    "htmlLang": "en",
+    "direction": "ltr"
+  },
+  "seo": {
+    "home": {
+      "title": "Express-Führerschein | Simple & digital driving licence preparation",
+      "description": "Prepare for your driving licence in a structured, fast and secure way with a learning plan, training, mock exams and personal support.",
+      "ogTitle": "Express-Führerschein",
+      "ogDescription": "Your digital platform for structured driving licence preparation."
+    }
+  },
+  "common": {
+    "brand": "Express-Führerschein",
+    "startNow": "Start now",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "continue": "Continue",
+    "back": "Back",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "selectLanguage": "Select language",
+    "currentLanguage": "Current language",
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "retry": "Try again"
+  },
+  "navigation": {
+    "licenseClasses": "Licence classes",
+    "process": "How it works",
+    "benefits": "Benefits",
+    "about": "About us",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "language": "EN",
+    "start": "Start now"
+  },
+  "home": {
+    "hero": {
+      "badge": "GERMANY’S LEADING ONLINE PLATFORM",
+      "title": "Your driving licence.",
+      "highlight": "Fast. Secure. In 21 days.",
+      "description": "Complete preparation for the theory test – structured, efficient and reliable.",
+      "benefits": {
+        "allClasses": "All classes",
+        "online": "100% Online",
+        "verifiedContent": "Verified content",
+        "personalSupport": "Personal support"
+      },
+      "primaryCta": "Start now",
+      "secondaryCta": "Learn more",
+      "primaryCtaAria": "Start with Express-Führerschein",
+      "secondaryCtaAria": "Learn more about Express-Führerschein"
+    },
+    "trust": {
+      "title": "Trust through verified quality",
+      "dekra": {
+        "name": "DEKRA",
+        "label": "Verified quality"
+      },
+      "tuev": {
+        "name": "TÜV",
+        "label": "TÜV certified"
+      },
+      "kba": {
+        "name": "KBA",
+        "label": "Recognised by KBA"
+      },
+      "trustpilot": {
+        "name": "Trustpilot",
+        "rating": "4.8/5",
+        "reviews": "2,500+ reviews"
+      }
+    },
+    "stats": {
+      "participants": {
+        "value": "250,000+",
+        "label": "Successful participants"
+      },
+      "duration": {
+        "value": "21 days",
+        "label": "Average duration"
+      },
+      "successRate": {
+        "value": "98%",
+        "label": "Pass rate"
+      },
+      "support": {
+        "value": "7 days / week",
+        "label": "Personal support"
+      }
+    },
+    "licenseClasses": {
+      "eyebrow": "DRIVING LICENCE CLASSES",
+      "title": "Choose your driving licence class",
+      "subtitle": "All categories – one platform",
+      "viewAll": "View all classes",
+      "selected": "Selected"
+    },
+    "whyExpress": {
+      "eyebrow": "YOUR BENEFITS",
+      "title": "Why Express-Führerschein?",
+      "items": {
+        "online": {
+          "title": "100% Online",
+          "description": "Learn flexibly from anywhere."
+        },
+        "guarantee": {
+          "title": "Exam guarantee",
+          "description": "Clear preparation through to exam day."
+        },
+        "certifiedContent": {
+          "title": "Certified content",
+          "description": "Up-to-date and relevant learning content."
+        },
+        "securePayment": {
+          "title": "Secure payment",
+          "description": "Protected and transparent payments."
+        },
+        "personalSupport": {
+          "title": "Personal support",
+          "description": "Support throughout your preparation."
+        }
+      }
+    },
+    "program21": {
+      "eyebrow": "21-DAY PROGRAMME",
+      "title": "Your path in 21 days",
+      "subtitle": "A clearly structured learning plan for your preparation.",
+      "phases": {
+        "phase1": {
+          "days": "Days 1–7",
+          "title": "Learn the basics",
+          "description": "Core rules, road signs and essential knowledge."
+        },
+        "phase2": {
+          "days": "Days 8–14",
+          "title": "Train intensively",
+          "description": "Questions, exercises and targeted review of your mistakes."
+        },
+        "phase3": {
+          "days": "Days 15–21",
+          "title": "Get exam-ready",
+          "description": "Mock exams, targeted revision and final preparation."
+        }
+      },
+      "cta": "Start the 21-day programme"
+    },
+    "howItWorks": {
+      "eyebrow": "HOW IT WORKS",
+      "title": "Start easily. Learn with structure.",
+      "subtitle": "Four clear steps to your preparation.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Choose a licence class",
+          "description": "Select the class that matches your driving licence."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Create an account",
+          "description": "Register in just a few steps."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Learn & practise",
+          "description": "Follow your learning plan and practise with focus."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Prepare for the exam",
+          "description": "Check your level with realistic mock exams."
+        }
+      }
+    },
+    "security": {
+      "eyebrow": "SECURITY",
+      "title": "Secure. Transparent. Trustworthy.",
+      "subtitle": "Your data and payments are professionally protected.",
+      "items": {
+        "gdpr": {
+          "title": "GDPR compliant",
+          "description": "Data protection based on European standards."
+        },
+        "ssl": {
+          "title": "SSL encryption",
+          "description": "Secure transmission of your data."
+        },
+        "payments": {
+          "title": "Secure payments",
+          "description": "Protected payment processing."
+        },
+        "privacy": {
+          "title": "Data privacy",
+          "description": "Transparent handling of your data."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "REVIEWS",
+      "title": "What our participants say",
+      "subtitle": "Experiences from participants using Express-Führerschein.",
+      "viewAll": "View all reviews",
+      "empty": "No reviews are currently available.",
+      "verified": "Verified review",
+      "licenseClass": "Licence class",
+      "country": "Country"
+    },
+    "countries": {
+      "eyebrow": "EUROPE",
+      "title": "Express-Führerschein in Europe",
+      "subtitle": "One platform – adapted to each country.",
+      "primaryMarket": "Primary market"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions",
+      "subtitle": "The most important answers at a glance.",
+      "items": {
+        "program": {
+          "question": "How does the 21-day programme work?",
+          "answer": "You receive a structured plan with daily learning, practice and review activities."
+        },
+        "classes": {
+          "question": "Which driving licence classes are available?",
+          "answer": "Express-Führerschein is built for multiple licence classes. Available classes depend on the selected country."
+        },
+        "mobile": {
+          "question": "Can I learn on my smartphone?",
+          "answer": "Yes. The platform is optimised for smartphone, tablet and computer."
+        },
+        "languages": {
+          "question": "Which languages are supported?",
+          "answer": "The platform is prepared for German, French, Dutch, Spanish, Italian and English."
+        },
+        "exams": {
+          "question": "How do mock exams work?",
+          "answer": "You can test your knowledge with simulations and then review your mistakes in a targeted way."
+        },
+        "support": {
+          "question": "How can I get support?",
+          "answer": "Personal support accompanies you throughout your preparation and helps with platform questions."
+        }
+      },
+      "viewAll": "View all questions"
+    },
+    "finalCta": {
+      "title": "Ready for your driving licence?",
+      "subtitle": "Start your preparation with Express-Führerschein now.",
+      "button": "Start now",
+      "note": "Registered in just a few minutes."
+    }
+  },
+  "licenseClasses": {
+    "B": {
+      "name": "Class B",
+      "shortName": "B",
+      "vehicle": "Car",
+      "imageAlt": "Car for driving licence class B"
+    },
+    "A": {
+      "name": "Class A",
+      "shortName": "A",
+      "vehicle": "Motorcycle",
+      "imageAlt": "Motorcycle for driving licence class A"
+    },
+    "C": {
+      "name": "Class C",
+      "shortName": "C",
+      "vehicle": "Truck",
+      "imageAlt": "Truck for driving licence class C"
+    },
+    "D": {
+      "name": "Class D",
+      "shortName": "D",
+      "vehicle": "Bus",
+      "imageAlt": "Bus for driving licence class D"
+    },
+    "BE": {
+      "name": "Class BE",
+      "shortName": "BE",
+      "vehicle": "Trailer",
+      "imageAlt": "Car with trailer for driving licence class BE"
+    },
+    "AM": {
+      "name": "Class AM",
+      "shortName": "AM",
+      "vehicle": "Scooter",
+      "imageAlt": "Scooter for driving licence class AM"
+    }
+  },
+  "countries": {
+    "DE": {
+      "name": "Germany",
+      "flag": "🇩🇪"
+    },
+    "AT": {
+      "name": "Austria",
+      "flag": "🇦🇹"
+    },
+    "CH": {
+      "name": "Switzerland",
+      "flag": "🇨🇭"
+    },
+    "BE": {
+      "name": "Belgium",
+      "flag": "🇧🇪"
+    },
+    "ES": {
+      "name": "Spain",
+      "flag": "🇪🇸"
+    }
+  },
+  "footer": {
+    "brandDescription": "Your digital platform for structured driving licence preparation.",
+    "columns": {
+      "platform": {
+        "title": "Platform",
+        "licenseClasses": "Licence classes",
+        "learning": "Learning",
+        "examTraining": "Exam training",
+        "program21": "21-day programme"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About us",
+        "contact": "Contact",
+        "reviews": "Reviews",
+        "faq": "FAQ"
+      },
+      "legal": {
+        "title": "Legal",
+        "imprint": "Legal notice",
+        "privacy": "Privacy",
+        "terms": "Terms & conditions",
+        "withdrawal": "Right of withdrawal",
+        "cookies": "Cookie settings"
+      },
+      "countries": {
+        "title": "Countries",
+        "germany": "Germany",
+        "austria": "Austria",
+        "switzerland": "Switzerland",
+        "belgium": "Belgium",
+        "spain": "Spain"
+      }
+    },
+    "copyright": "© Express-Führerschein. All rights reserved."
+  }
+}

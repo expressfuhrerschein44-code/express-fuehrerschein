@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "training-c1e-zugbildung-ladung",
+    "sortOrder": 1,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "C1E – Zugbildung und Ladung",
+        "description": "Vertiefendes Training zu Fahrzeugkombination, Verbindung, Massen, Ladung und Abfahrtkontrolle."
+      }
+    ]
+  },
+  {
+    "slug": "training-c1e-rangieren-bremsen",
+    "sortOrder": 2,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "C1E – Rangieren und Bremsen",
+        "description": "Vertiefendes Training zu Rückwärtsfahren, Rampe, Kurvenlauf, Bremsverhalten und Sicherheitsreserven."
+      }
+    ]
+  }
+]

@@ -1,0 +1,230 @@
+// ============================================================================
+// EXPRESS-FÜHRERSCHEIN — THEORY COMPLEMENTARY PRISMA MODELS
+// ============================================================================
+// Do not paste blindly over schema.prisma.
+// Use scripts/apply-theory-prisma-complement.mjs from this ZIP.
+// This file is reference/documentation for the models injected by that script.
+// ============================================================================
+
+model theory_programs {
+  id                 String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  country_code       String    @db.Char(2)
+  license_class_code String    @db.VarChar(8)
+  code               String    @unique(map: "uq_theory_programs_code") @db.VarChar(96)
+  version            String    @db.VarChar(32)
+  status             String    @default("draft") @db.VarChar(24)
+  is_current         Boolean   @default(false)
+  valid_from         DateTime? @db.Date
+  valid_until        DateTime? @db.Date
+  published_at       DateTime? @db.Timestamptz(6)
+  created_at         DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+
+  topics              theory_topics[]
+  exam_configurations exam_configurations[]
+
+  @@unique([country_code, license_class_code, version], map: "uq_theory_programs_country_class_version")
+  @@index([country_code, license_class_code, status], map: "idx_theory_programs_country_class_status")
+}
+
+model theory_question_versions {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  question_id String   @db.Uuid
+  version     Int
+  snapshot    Json
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+
+  theory_questions theory_questions @relation(fields: [question_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_question_versions_question")
+
+  @@unique([question_id, version], map: "uq_theory_question_versions_question_version")
+  @@index([question_id, created_at(sort: Desc)], map: "idx_theory_question_versions_question_created")
+}
+
+model theory_lessons {
+  id                         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  topic_id                   String    @db.Uuid
+  slug                       String    @db.VarChar(96)
+  sort_order                 Int       @default(0)
+  estimated_duration_minutes Int?      @db.SmallInt
+  status                     String    @default("draft") @db.VarChar(24)
+  version                    Int       @default(1)
+  valid_from                 DateTime? @db.Date
+  valid_until                DateTime? @db.Date
+  published_at               DateTime? @db.Timestamptz(6)
+  created_at                 DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at                 DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+
+  theory_topics        theory_topics @relation(fields: [topic_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_lessons_topic")
+  translations         theory_lesson_translations[]
+  content_blocks       theory_lesson_content_blocks[]
+  user_progress        user_lesson_progress[]
+  notes                theory_question_notes[]
+  study_sessions       theory_study_sessions[]
+
+  @@unique([topic_id, slug], map: "uq_theory_lessons_topic_slug")
+  @@index([topic_id, status, sort_order], map: "idx_theory_lessons_topic_status_order")
+}
+
+model theory_lesson_translations {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lesson_id   String   @db.Uuid
+  locale      String   @db.VarChar(8)
+  title       String   @db.VarChar(180)
+  description String?  @db.Text
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+  updated_at  DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+
+  theory_lessons theory_lessons @relation(fields: [lesson_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_lesson_translations_lesson")
+
+  @@unique([lesson_id, locale], map: "uq_theory_lesson_translations_lesson_locale")
+  @@index([locale], map: "idx_theory_lesson_translations_locale")
+}
+
+model theory_lesson_content_blocks {
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lesson_id          String   @db.Uuid
+  block_type         String   @db.VarChar(32)
+  sort_order         Int      @default(0)
+  media_storage_path String?  @db.VarChar(768)
+  question_id        String?  @db.Uuid
+  config_json        Json?
+  is_active          Boolean  @default(true)
+  created_at         DateTime @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+
+  theory_lessons    theory_lessons                   @relation(fields: [lesson_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_lesson_content_blocks_lesson")
+  theory_questions  theory_questions?                @relation(fields: [question_id], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "fk_theory_lesson_content_blocks_question")
+  translations      theory_lesson_content_block_translations[]
+
+  @@index([lesson_id, is_active, sort_order], map: "idx_theory_lesson_content_blocks_lesson_order")
+  @@index([question_id], map: "idx_theory_lesson_content_blocks_question")
+}
+
+model theory_lesson_content_block_translations {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  block_id     String   @db.Uuid
+  locale       String   @db.VarChar(8)
+  title        String?  @db.VarChar(180)
+  body_text    String?  @db.Text
+  content_json Json?
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+  updated_at   DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+
+  theory_lesson_content_blocks theory_lesson_content_blocks @relation(fields: [block_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_lesson_block_translations_block")
+
+  @@unique([block_id, locale], map: "uq_theory_lesson_block_translations_block_locale")
+  @@index([locale], map: "idx_theory_lesson_block_translations_locale")
+}
+
+model user_lesson_progress {
+  id                    String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_license_class_id String    @db.Uuid
+  lesson_id             String    @db.Uuid
+  progress_percent      Int       @default(0) @db.SmallInt
+  current_block_index   Int       @default(0)
+  completed             Boolean   @default(false)
+  started_at            DateTime? @db.Timestamptz(6)
+  completed_at          DateTime? @db.Timestamptz(6)
+  last_activity_at      DateTime? @db.Timestamptz(6)
+  total_active_seconds  Int       @default(0)
+  created_at            DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at            DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+
+  user_license_classes user_license_classes @relation(fields: [user_license_class_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_user_lesson_progress_user_license_class")
+  theory_lessons       theory_lessons       @relation(fields: [lesson_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "fk_user_lesson_progress_lesson")
+
+  @@unique([user_license_class_id, lesson_id], map: "uq_user_lesson_progress_user_class_lesson")
+  @@index([user_license_class_id, last_activity_at(sort: Desc)], map: "idx_user_lesson_progress_user_class_activity")
+  @@index([lesson_id], map: "idx_user_lesson_progress_lesson")
+}
+
+model theory_question_favorites {
+  id                    String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_license_class_id String   @db.Uuid
+  question_id           String   @db.Uuid
+  created_at            DateTime @default(now()) @db.Timestamptz(6)
+
+  user_license_classes user_license_classes @relation(fields: [user_license_class_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_question_favorites_user_license_class")
+  theory_questions     theory_questions     @relation(fields: [question_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_question_favorites_question")
+
+  @@unique([user_license_class_id, question_id], map: "uq_theory_question_favorites_user_class_question")
+  @@index([user_license_class_id, created_at(sort: Desc)], map: "idx_theory_question_favorites_user_class_created")
+}
+
+model theory_question_notes {
+  id                    String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_license_class_id String   @db.Uuid
+  question_id           String?  @db.Uuid
+  lesson_id             String?  @db.Uuid
+  body                  String   @db.Text
+  created_at            DateTime @default(now()) @db.Timestamptz(6)
+  updated_at            DateTime @default(now()) @updatedAt @db.Timestamptz(6)
+
+  user_license_classes user_license_classes @relation(fields: [user_license_class_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_question_notes_user_license_class")
+  theory_questions     theory_questions?    @relation(fields: [question_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_question_notes_question")
+  theory_lessons       theory_lessons?      @relation(fields: [lesson_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_question_notes_lesson")
+
+  @@index([user_license_class_id, created_at(sort: Desc)], map: "idx_theory_question_notes_user_class_created")
+  @@index([question_id], map: "idx_theory_question_notes_question")
+  @@index([lesson_id], map: "idx_theory_question_notes_lesson")
+}
+
+model theory_question_reports {
+  id                    String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_license_class_id String    @db.Uuid
+  question_id           String    @db.Uuid
+  reason                String    @db.VarChar(32)
+  message               String?   @db.Text
+  status                String    @default("open") @db.VarChar(24)
+  resolved_at           DateTime? @db.Timestamptz(6)
+  created_at            DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at            DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+
+  user_license_classes user_license_classes @relation(fields: [user_license_class_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_question_reports_user_license_class")
+  theory_questions     theory_questions     @relation(fields: [question_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "fk_theory_question_reports_question")
+
+  @@index([user_license_class_id, created_at(sort: Desc)], map: "idx_theory_question_reports_user_class_created")
+  @@index([status, created_at(sort: Desc)], map: "idx_theory_question_reports_status_created")
+}
+
+model theory_study_sessions {
+  id                    String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_license_class_id String    @db.Uuid
+  lesson_id             String?   @db.Uuid
+  session_type          String    @default("lesson") @db.VarChar(24)
+  status                String    @default("active") @db.VarChar(24)
+  started_at            DateTime  @default(now()) @db.Timestamptz(6)
+  last_activity_at      DateTime  @default(now()) @db.Timestamptz(6)
+  ended_at              DateTime? @db.Timestamptz(6)
+  active_seconds        Int       @default(0)
+  created_at            DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at            DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+
+  user_license_classes user_license_classes @relation(fields: [user_license_class_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_theory_study_sessions_user_license_class")
+  theory_lessons       theory_lessons?      @relation(fields: [lesson_id], references: [id], onDelete: SetNull, onUpdate: NoAction, map: "fk_theory_study_sessions_lesson")
+
+  @@index([user_license_class_id, started_at(sort: Desc)], map: "idx_theory_study_sessions_user_class_started")
+  @@index([user_license_class_id, status, last_activity_at(sort: Desc)], map: "idx_theory_study_sessions_active")
+}
+
+model exam_configurations {
+  id               String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  program_id       String    @db.Uuid
+  version          String    @db.VarChar(32)
+  question_count   Int       @db.SmallInt
+  duration_seconds Int
+  scoring_method   String    @db.VarChar(32)
+  passing_rule     Json
+  status           String    @default("draft") @db.VarChar(24)
+  active_from      DateTime? @db.Date
+  active_until     DateTime? @db.Date
+  published_at     DateTime? @db.Timestamptz(6)
+  created_at       DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime  @default(now()) @updatedAt @db.Timestamptz(6)
+
+  theory_programs theory_programs @relation(fields: [program_id], references: [id], onDelete: Restrict, onUpdate: NoAction, map: "fk_exam_configurations_program")
+  exam_attempts   exam_attempts[]
+
+  @@unique([program_id, version], map: "uq_exam_configurations_program_version")
+  @@index([program_id, status, active_from, active_until], map: "idx_exam_configurations_program_status_dates")
+}

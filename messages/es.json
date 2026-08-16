@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "locale": "es",
+    "languageName": "Español",
+    "htmlLang": "es",
+    "direction": "ltr"
+  },
+  "seo": {
+    "home": {
+      "title": "Express-Führerschein | Preparación del permiso fácil y digital",
+      "description": "Prepárate para tu permiso de conducir de forma estructurada, rápida y segura con plan de estudio, entrenamiento, simulacros y acompañamiento personal.",
+      "ogTitle": "Express-Führerschein",
+      "ogDescription": "Tu plataforma digital para una preparación estructurada del permiso de conducir."
+    }
+  },
+  "common": {
+    "brand": "Express-Führerschein",
+    "startNow": "Empezar ahora",
+    "learnMore": "Más información",
+    "viewAll": "Ver todo",
+    "continue": "Continuar",
+    "back": "Volver",
+    "close": "Cerrar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "selectLanguage": "Seleccionar idioma",
+    "currentLanguage": "Idioma actual",
+    "loading": "Cargando…",
+    "error": "Ha ocurrido un error.",
+    "retry": "Intentar de nuevo"
+  },
+  "navigation": {
+    "licenseClasses": "Clases de permiso",
+    "process": "Cómo funciona",
+    "benefits": "Ventajas",
+    "about": "Sobre nosotros",
+    "reviews": "Opiniones",
+    "faq": "FAQ",
+    "language": "ES",
+    "start": "Empezar ahora"
+  },
+  "home": {
+    "hero": {
+      "badge": "LA PLATAFORMA ONLINE DE REFERENCIA EN ALEMANIA",
+      "title": "Tu permiso de conducir.",
+      "highlight": "Rápido. Seguro. En 21 días.",
+      "description": "Preparación completa para el examen teórico – estructurada, eficiente y fiable.",
+      "benefits": {
+        "allClasses": "Todas las clases",
+        "online": "100% online",
+        "verifiedContent": "Contenidos verificados",
+        "personalSupport": "Acompañamiento personal"
+      },
+      "primaryCta": "Empezar ahora",
+      "secondaryCta": "Más información",
+      "primaryCtaAria": "Empezar con Express-Führerschein",
+      "secondaryCtaAria": "Saber más sobre Express-Führerschein"
+    },
+    "trust": {
+      "title": "Confianza gracias a una calidad verificada",
+      "dekra": {
+        "name": "DEKRA",
+        "label": "Calidad verificada"
+      },
+      "tuev": {
+        "name": "TÜV",
+        "label": "Certificado TÜV"
+      },
+      "kba": {
+        "name": "KBA",
+        "label": "Reconocido por KBA"
+      },
+      "trustpilot": {
+        "name": "Trustpilot",
+        "rating": "4,8/5",
+        "reviews": "2.500+ opiniones"
+      }
+    },
+    "stats": {
+      "participants": {
+        "value": "250.000+",
+        "label": "Participantes con éxito"
+      },
+      "duration": {
+        "value": "21 días",
+        "label": "Duración media"
+      },
+      "successRate": {
+        "value": "98%",
+        "label": "Tasa de aprobados"
+      },
+      "support": {
+        "value": "7 días / semana",
+        "label": "Soporte personal"
+      }
+    },
+    "licenseClasses": {
+      "eyebrow": "CLASES DE PERMISO",
+      "title": "Elige tu clase de permiso",
+      "subtitle": "Todas las categorías – una plataforma",
+      "viewAll": "Ver todas las clases",
+      "selected": "Seleccionada"
+    },
+    "whyExpress": {
+      "eyebrow": "TUS VENTAJAS",
+      "title": "¿Por qué Express-Führerschein?",
+      "items": {
+        "online": {
+          "title": "100% online",
+          "description": "Aprende con flexibilidad desde cualquier lugar."
+        },
+        "guarantee": {
+          "title": "Garantía de examen",
+          "description": "Preparación clara hasta el día del examen."
+        },
+        "certifiedContent": {
+          "title": "Contenidos certificados",
+          "description": "Contenidos actuales y relevantes."
+        },
+        "securePayment": {
+          "title": "Pago seguro",
+          "description": "Pagos protegidos y transparentes."
+        },
+        "personalSupport": {
+          "title": "Soporte personal",
+          "description": "Acompañamiento durante tu preparación."
+        }
+      }
+    },
+    "program21": {
+      "eyebrow": "PROGRAMA DE 21 DÍAS",
+      "title": "Tu camino en 21 días",
+      "subtitle": "Un plan de estudio claramente estructurado para tu preparación.",
+      "phases": {
+        "phase1": {
+          "days": "Días 1–7",
+          "title": "Aprender las bases",
+          "description": "Reglas, señales y conocimientos fundamentales."
+        },
+        "phase2": {
+          "days": "Días 8–14",
+          "title": "Entrenar intensivamente",
+          "description": "Preguntas, ejercicios y revisión específica de tus errores."
+        },
+        "phase3": {
+          "days": "Días 15–21",
+          "title": "Prepararte para el examen",
+          "description": "Simulacros, repaso dirigido y preparación final."
+        }
+      },
+      "cta": "Empezar el programa de 21 días"
+    },
+    "howItWorks": {
+      "eyebrow": "CÓMO FUNCIONA",
+      "title": "Empieza fácilmente. Aprende con estructura.",
+      "subtitle": "Cuatro pasos claros para tu preparación.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Elegir la clase de permiso",
+          "description": "Selecciona la clase correspondiente a tu permiso."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Crear una cuenta",
+          "description": "Regístrate en pocos pasos."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Aprender y entrenar",
+          "description": "Sigue tu plan y practica de forma específica."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Preparar el examen",
+          "description": "Comprueba tu nivel con simulacros realistas."
+        }
+      }
+    },
+    "security": {
+      "eyebrow": "SEGURIDAD",
+      "title": "Seguro. Transparente. Fiable.",
+      "subtitle": "Tus datos y pagos están protegidos profesionalmente.",
+      "items": {
+        "gdpr": {
+          "title": "Conforme al RGPD",
+          "description": "Protección de datos según estándares europeos."
+        },
+        "ssl": {
+          "title": "Cifrado SSL",
+          "description": "Transmisión segura de tus datos."
+        },
+        "payments": {
+          "title": "Pagos seguros",
+          "description": "Procesamiento de pagos protegido."
+        },
+        "privacy": {
+          "title": "Protección de datos",
+          "description": "Gestión transparente de tus datos."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "OPINIONES",
+      "title": "Lo que dicen nuestros participantes",
+      "subtitle": "Experiencias de participantes con Express-Führerschein.",
+      "viewAll": "Ver todas las opiniones",
+      "empty": "Actualmente no hay opiniones disponibles.",
+      "verified": "Opinión verificada",
+      "licenseClass": "Clase de permiso",
+      "country": "País"
+    },
+    "countries": {
+      "eyebrow": "EUROPA",
+      "title": "Express-Führerschein en Europa",
+      "subtitle": "Una plataforma – adaptada a cada país.",
+      "primaryMarket": "Mercado principal"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Las respuestas más importantes de un vistazo.",
+      "items": {
+        "program": {
+          "question": "¿Cómo funciona el programa de 21 días?",
+          "answer": "Recibes un plan estructurado con actividades diarias de aprendizaje, práctica y repaso."
+        },
+        "classes": {
+          "question": "¿Qué clases de permiso están disponibles?",
+          "answer": "Express-Führerschein está preparado para varias clases. Las clases disponibles dependen del país seleccionado."
+        },
+        "mobile": {
+          "question": "¿Puedo estudiar en el móvil?",
+          "answer": "Sí. La plataforma está optimizada para smartphone, tableta y ordenador."
+        },
+        "languages": {
+          "question": "¿Qué idiomas están disponibles?",
+          "answer": "La plataforma está preparada en alemán, francés, neerlandés, español, italiano e inglés."
+        },
+        "exams": {
+          "question": "¿Cómo funcionan los simulacros de examen?",
+          "answer": "Puedes comprobar tus conocimientos con simulaciones y después repasar específicamente tus errores."
+        },
+        "support": {
+          "question": "¿Cómo puedo recibir ayuda?",
+          "answer": "El soporte personal te acompaña durante tu preparación y te ayuda con las preguntas sobre la plataforma."
+        }
+      },
+      "viewAll": "Ver todas las preguntas"
+    },
+    "finalCta": {
+      "title": "¿Preparado para tu permiso?",
+      "subtitle": "Empieza ahora tu preparación con Express-Führerschein.",
+      "button": "Empezar ahora",
+      "note": "Registro en pocos minutos."
+    }
+  },
+  "licenseClasses": {
+    "B": {
+      "name": "Clase B",
+      "shortName": "B",
+      "vehicle": "Coche",
+      "imageAlt": "Coche para el permiso de clase B"
+    },
+    "A": {
+      "name": "Clase A",
+      "shortName": "A",
+      "vehicle": "Motocicleta",
+      "imageAlt": "Motocicleta para el permiso de clase A"
+    },
+    "C": {
+      "name": "Clase C",
+      "shortName": "C",
+      "vehicle": "Camión",
+      "imageAlt": "Camión para el permiso de clase C"
+    },
+    "D": {
+      "name": "Clase D",
+      "shortName": "D",
+      "vehicle": "Autobús",
+      "imageAlt": "Autobús para el permiso de clase D"
+    },
+    "BE": {
+      "name": "Clase BE",
+      "shortName": "BE",
+      "vehicle": "Remolque",
+      "imageAlt": "Coche con remolque para el permiso de clase BE"
+    },
+    "AM": {
+      "name": "Clase AM",
+      "shortName": "AM",
+      "vehicle": "Ciclomotor",
+      "imageAlt": "Ciclomotor para el permiso de clase AM"
+    }
+  },
+  "countries": {
+    "DE": {
+      "name": "Alemania",
+      "flag": "🇩🇪"
+    },
+    "AT": {
+      "name": "Austria",
+      "flag": "🇦🇹"
+    },
+    "CH": {
+      "name": "Suiza",
+      "flag": "🇨🇭"
+    },
+    "BE": {
+      "name": "Bélgica",
+      "flag": "🇧🇪"
+    },
+    "ES": {
+      "name": "España",
+      "flag": "🇪🇸"
+    }
+  },
+  "footer": {
+    "brandDescription": "Tu plataforma digital para una preparación estructurada del permiso de conducir.",
+    "columns": {
+      "platform": {
+        "title": "Plataforma",
+        "licenseClasses": "Clases de permiso",
+        "learning": "Aprendizaje",
+        "examTraining": "Entrenamiento de examen",
+        "program21": "Programa de 21 días"
+      },
+      "company": {
+        "title": "Empresa",
+        "about": "Sobre nosotros",
+        "contact": "Contacto",
+        "reviews": "Opiniones",
+        "faq": "FAQ"
+      },
+      "legal": {
+        "title": "Legal",
+        "imprint": "Aviso legal",
+        "privacy": "Privacidad",
+        "terms": "Términos y condiciones",
+        "withdrawal": "Derecho de desistimiento",
+        "cookies": "Configuración de cookies"
+      },
+      "countries": {
+        "title": "Países",
+        "germany": "Alemania",
+        "austria": "Austria",
+        "switzerland": "Suiza",
+        "belgium": "Bélgica",
+        "spain": "España"
+      }
+    },
+    "copyright": "© Express-Führerschein. Todos los derechos reservados."
+  }
+}

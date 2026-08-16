@@ -1,0 +1,39 @@
+{
+  "name": "express-fuehrerschein",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Express-Führerschein — plateforme digitale premium de préparation au permis de conduire.",
+  "scripts": {
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\"",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "lucide-react": "^1.31.0",
+    "next": "15.5.21",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.6",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "15.5.21",
+    "postcss": "^8.5.0",
+    "prisma": "^6.19.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "topicSlug": "zusatz-d-stvzo-kraftomnibusse",
+  "lessons": [
+    {
+      "slug": "zusatz-d-stvzo-kraftomnibusse-grundlagen",
+      "sortOrder": 1,
+      "status": "draft",
+      "estimatedDurationMinutes": 12,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Fahrzeugvorschriften für Kraftomnibusse – Grundlagen",
+          "description": "Grundwissen und Sicherheitsprinzipien für Fahrzeugvorschriften für Kraftomnibusse."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Lernziel",
+              "bodyText": "Abmessungen, Gewichte, Sitze, Sicherheitsgurte, Türen, Notausstiege, Feuerlöscher, Erste-Hilfe-Material, Bereifung und Geschwindigkeitsbegrenzer.",
+              "content": {
+                "bullets": [
+                  "Sicherheits- und Rettungseinrichtungen vollständig und zugänglich halten.",
+                  "Zulässige Abmessungen, Massen und Besetzung einhalten.",
+                  "Türen, Sitze, Gurte, Notausstiege und Feuerlöscher vor Einsatz kontrollieren."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "INFO",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Merke",
+              "bodyText": "Sicherheits- und Rettungseinrichtungen vollständig und zugänglich halten.",
+              "content": {
+                "bullets": [
+                  "Zulässige Abmessungen, Massen und Besetzung einhalten.",
+                  "Türen, Sitze, Gurte, Notausstiege und Feuerlöscher vor Einsatz kontrollieren."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "EXAMPLE",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Praxisbezug",
+              "bodyText": "Übertragen Sie die Regeln auf eine konkrete Verkehrssituation: zuerst beobachten, Risiken erkennen, Sicherheitsreserve schaffen und erst danach handeln.",
+              "content": {
+                "checklist": [
+                  "Umfeld beobachten",
+                  "Risiko einschätzen",
+                  "Geschwindigkeit und Abstand anpassen",
+                  "Entscheidung kontrolliert ausführen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-D1-23-Q001",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Wissenscheck",
+              "bodyText": "Beantworten Sie die Frage, bevor Sie mit der nächsten Lektion fortfahren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zusatz-d-stvzo-kraftomnibusse-anwendung",
+      "sortOrder": 2,
+      "status": "draft",
+      "estimatedDurationMinutes": 14,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Fahrzeugvorschriften für Kraftomnibusse – Anwendung und Risiken",
+          "description": "Typische Risiken erkennen und Entscheidungen zum Themenbereich Fahrzeugvorschriften für Kraftomnibusse sicher anwenden."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Sicher anwenden",
+              "bodyText": "Regelwissen ist nur dann wirksam, wenn es frühzeitig in Beobachtung und Fahrentscheidung einfließt.",
+              "content": {
+                "bullets": [
+                  "Sicherheits- und Rettungseinrichtungen vollständig und zugänglich halten.",
+                  "Zulässige Abmessungen, Massen und Besetzung einhalten.",
+                  "Türen, Sitze, Gurte, Notausstiege und Feuerlöscher vor Einsatz kontrollieren."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "WARNING",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Typischer Fehler",
+              "bodyText": "Nicht erst reagieren, wenn die Gefahr unmittelbar ist. Zu spätes Erkennen reduziert Brems-, Ausweich- und Entscheidungsreserven.",
+              "content": {
+                "avoid": [
+                  "Unaufmerksamkeit",
+                  "Zeitdruck",
+                  "zu geringe Sicherheitsreserve",
+                  "unkontrollierte spontane Manöver"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "TIP",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Prüfungs- und Praxistipp",
+              "bodyText": "Fragen Sie sich vor einer Entscheidung: Was sehe ich? Was könnte passieren? Welche Reserve brauche ich? Welche Handlung ist für alle Beteiligten am sichersten?"
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-D1-23-Q004",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Situationscheck",
+              "bodyText": "Wählen Sie die sicherste Vorgehensweise."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

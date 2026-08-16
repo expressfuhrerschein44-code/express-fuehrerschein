@@ -1,0 +1,175 @@
+{
+  "topicSlug": "zusatz-d-rahmen-fahrwerk-elektrik",
+  "lessons": [
+    {
+      "slug": "zusatz-d-rahmen-fahrwerk-elektrik-grundlagen",
+      "sortOrder": 1,
+      "status": "draft",
+      "estimatedDurationMinutes": 12,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Rahmen, Fahrwerk und elektrische Anlage – Grundlagen",
+          "description": "Grundwissen und Sicherheitsprinzipien für Rahmen, Fahrwerk und elektrische Anlage."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Lernziel",
+              "bodyText": "Rahmen, Fahrgestell, Federung, Räder, Reifen, Lenkung, Batterie, Beleuchtung, Heizung, Lüftung und weitere elektrische Systeme.",
+              "content": {
+                "bullets": [
+                  "Reifen, Fahrwerk, Lenkung und elektrische Anlage regelmäßig kontrollieren.",
+                  "Fahrzeughöhe, Länge und Fahrwerkseigenschaften bei der Streckenwahl berücksichtigen.",
+                  "Warnanzeigen und technische Auffälligkeiten vor der Personenbeförderung klären."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "INFO",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Merke",
+              "bodyText": "Reifen, Fahrwerk, Lenkung und elektrische Anlage regelmäßig kontrollieren.",
+              "content": {
+                "bullets": [
+                  "Fahrzeughöhe, Länge und Fahrwerkseigenschaften bei der Streckenwahl berücksichtigen.",
+                  "Warnanzeigen und technische Auffälligkeiten vor der Personenbeförderung klären."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "EXAMPLE",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Praxisbezug",
+              "bodyText": "Übertragen Sie die Regeln auf eine konkrete Verkehrssituation: zuerst beobachten, Risiken erkennen, Sicherheitsreserve schaffen und erst danach handeln.",
+              "content": {
+                "checklist": [
+                  "Umfeld beobachten",
+                  "Risiko einschätzen",
+                  "Geschwindigkeit und Abstand anpassen",
+                  "Entscheidung kontrolliert ausführen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-D1-14-Q001",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Wissenscheck",
+              "bodyText": "Beantworten Sie die Frage, bevor Sie mit der nächsten Lektion fortfahren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zusatz-d-rahmen-fahrwerk-elektrik-anwendung",
+      "sortOrder": 2,
+      "status": "draft",
+      "estimatedDurationMinutes": 14,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Rahmen, Fahrwerk und elektrische Anlage – Anwendung und Risiken",
+          "description": "Typische Risiken erkennen und Entscheidungen zum Themenbereich Rahmen, Fahrwerk und elektrische Anlage sicher anwenden."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Sicher anwenden",
+              "bodyText": "Regelwissen ist nur dann wirksam, wenn es frühzeitig in Beobachtung und Fahrentscheidung einfließt.",
+              "content": {
+                "bullets": [
+                  "Reifen, Fahrwerk, Lenkung und elektrische Anlage regelmäßig kontrollieren.",
+                  "Fahrzeughöhe, Länge und Fahrwerkseigenschaften bei der Streckenwahl berücksichtigen.",
+                  "Warnanzeigen und technische Auffälligkeiten vor der Personenbeförderung klären."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "WARNING",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Typischer Fehler",
+              "bodyText": "Nicht erst reagieren, wenn die Gefahr unmittelbar ist. Zu spätes Erkennen reduziert Brems-, Ausweich- und Entscheidungsreserven.",
+              "content": {
+                "avoid": [
+                  "Unaufmerksamkeit",
+                  "Zeitdruck",
+                  "zu geringe Sicherheitsreserve",
+                  "unkontrollierte spontane Manöver"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "TIP",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Prüfungs- und Praxistipp",
+              "bodyText": "Fragen Sie sich vor einer Entscheidung: Was sehe ich? Was könnte passieren? Welche Reserve brauche ich? Welche Handlung ist für alle Beteiligten am sichersten?"
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-D1-14-Q004",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Situationscheck",
+              "bodyText": "Wählen Sie die sicherste Vorgehensweise."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

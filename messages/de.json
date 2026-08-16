@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "locale": "de",
+    "languageName": "Deutsch",
+    "htmlLang": "de",
+    "direction": "ltr"
+  },
+  "seo": {
+    "home": {
+      "title": "Express-Führerschein | Führerscheinvorbereitung einfach & digital",
+      "description": "Bereite dich strukturiert, schnell und sicher auf deinen Führerschein vor – mit Lernplan, Training, Prüfungssimulationen und persönlicher Begleitung.",
+      "ogTitle": "Express-Führerschein",
+      "ogDescription": "Deine digitale Plattform für eine strukturierte Führerscheinvorbereitung."
+    }
+  },
+  "common": {
+    "brand": "Express-Führerschein",
+    "startNow": "Jetzt starten",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "close": "Schließen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "selectLanguage": "Sprache auswählen",
+    "currentLanguage": "Aktuelle Sprache",
+    "loading": "Wird geladen…",
+    "error": "Etwas ist schiefgelaufen.",
+    "retry": "Erneut versuchen"
+  },
+  "navigation": {
+    "licenseClasses": "Führerscheinklassen",
+    "process": "Ablauf",
+    "benefits": "Vorteile",
+    "about": "Über uns",
+    "reviews": "Bewertungen",
+    "faq": "FAQ",
+    "language": "DE",
+    "start": "Jetzt starten"
+  },
+  "home": {
+    "hero": {
+      "badge": "DEUTSCHLANDS FÜHRENDE ONLINE-PLATTFORM",
+      "title": "Dein Führerschein.",
+      "highlight": "Schnell. Sicher. In 21 Tagen.",
+      "description": "Die komplette Vorbereitung auf die theoretische Prüfung – strukturiert, effizient und zuverlässig.",
+      "benefits": {
+        "allClasses": "Alle Klassen",
+        "online": "100% Online",
+        "verifiedContent": "Geprüfte Inhalte",
+        "personalSupport": "Persönliche Begleitung"
+      },
+      "primaryCta": "Jetzt starten",
+      "secondaryCta": "Mehr erfahren",
+      "primaryCtaAria": "Jetzt mit Express-Führerschein starten",
+      "secondaryCtaAria": "Mehr über Express-Führerschein erfahren"
+    },
+    "trust": {
+      "title": "Vertrauen durch geprüfte Qualität",
+      "dekra": {
+        "name": "DEKRA",
+        "label": "Geprüfte Qualität"
+      },
+      "tuev": {
+        "name": "TÜV",
+        "label": "TÜV-zertifiziert"
+      },
+      "kba": {
+        "name": "KBA",
+        "label": "Anerkannt vom KBA"
+      },
+      "trustpilot": {
+        "name": "Trustpilot",
+        "rating": "4,8/5",
+        "reviews": "2.500+ Bewertungen"
+      }
+    },
+    "stats": {
+      "participants": {
+        "value": "250.000+",
+        "label": "Erfolgreiche Teilnehmer"
+      },
+      "duration": {
+        "value": "21 Tage",
+        "label": "Durchschnittliche Dauer"
+      },
+      "successRate": {
+        "value": "98%",
+        "label": "Bestehensquote"
+      },
+      "support": {
+        "value": "7 Tage / Woche",
+        "label": "Persönlicher Support"
+      }
+    },
+    "licenseClasses": {
+      "eyebrow": "FÜHRERSCHEINKLASSEN",
+      "title": "Wähle deine Führerscheinklasse",
+      "subtitle": "Alle Kategorien – eine Plattform",
+      "viewAll": "Alle Klassen anzeigen",
+      "selected": "Ausgewählt"
+    },
+    "whyExpress": {
+      "eyebrow": "DEINE VORTEILE",
+      "title": "Warum Express-Führerschein?",
+      "items": {
+        "online": {
+          "title": "100% Online",
+          "description": "Lerne flexibel von überall."
+        },
+        "guarantee": {
+          "title": "Prüfungsgarantie",
+          "description": "Klare Vorbereitung bis zum Prüfungstag."
+        },
+        "certifiedContent": {
+          "title": "Zertifizierte Inhalte",
+          "description": "Aktuelle und relevante Lerninhalte."
+        },
+        "securePayment": {
+          "title": "Sichere Zahlung",
+          "description": "Geschützte und transparente Zahlungen."
+        },
+        "personalSupport": {
+          "title": "Persönlicher Support",
+          "description": "Unterstützung während deiner Vorbereitung."
+        }
+      }
+    },
+    "program21": {
+      "eyebrow": "21-TAGE-PROGRAMM",
+      "title": "Dein Weg in 21 Tagen",
+      "subtitle": "Ein klar strukturierter Lernplan für deine Vorbereitung.",
+      "phases": {
+        "phase1": {
+          "days": "Tage 1–7",
+          "title": "Grundlagen lernen",
+          "description": "Grundlagen, Regeln, Verkehrszeichen und wichtige Kerninhalte."
+        },
+        "phase2": {
+          "days": "Tage 8–14",
+          "title": "Intensiv trainieren",
+          "description": "Fragen, Übungen und gezielte Wiederholung deiner Fehler."
+        },
+        "phase3": {
+          "days": "Tage 15–21",
+          "title": "Prüfungsbereit werden",
+          "description": "Prüfungssimulationen, gezielte Wiederholung und finale Vorbereitung."
+        }
+      },
+      "cta": "21-Tage-Programm starten"
+    },
+    "howItWorks": {
+      "eyebrow": "SO FUNKTIONIERT’S",
+      "title": "Einfach starten. Strukturiert lernen.",
+      "subtitle": "In vier klaren Schritten zu deiner Vorbereitung.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Führerscheinklasse wählen",
+          "description": "Wähle die passende Klasse für deinen Führerschein."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Konto erstellen",
+          "description": "Registriere dich in wenigen Schritten."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Lernen & trainieren",
+          "description": "Arbeite deinen Lernplan durch und trainiere gezielt."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Prüfung vorbereiten",
+          "description": "Teste deinen Stand mit realistischen Prüfungssimulationen."
+        }
+      }
+    },
+    "security": {
+      "eyebrow": "SICHERHEIT",
+      "title": "Sicher. Transparent. Vertrauenswürdig.",
+      "subtitle": "Deine Daten und Zahlungen werden professionell geschützt.",
+      "items": {
+        "gdpr": {
+          "title": "DSGVO-konform",
+          "description": "Datenschutz nach europäischen Standards."
+        },
+        "ssl": {
+          "title": "SSL-Verschlüsselung",
+          "description": "Sichere Übertragung deiner Daten."
+        },
+        "payments": {
+          "title": "Sichere Zahlungen",
+          "description": "Geschützte Zahlungsabwicklung."
+        },
+        "privacy": {
+          "title": "Datenschutz",
+          "description": "Transparenter Umgang mit deinen Daten."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "BEWERTUNGEN",
+      "title": "Was unsere Teilnehmer sagen",
+      "subtitle": "Erfahrungen von Teilnehmern mit Express-Führerschein.",
+      "viewAll": "Alle Bewertungen ansehen",
+      "empty": "Aktuell sind keine Bewertungen verfügbar.",
+      "verified": "Verifizierte Bewertung",
+      "licenseClass": "Führerscheinklasse",
+      "country": "Land"
+    },
+    "countries": {
+      "eyebrow": "EUROPA",
+      "title": "Express-Führerschein in Europa",
+      "subtitle": "Eine Plattform – angepasst an das jeweilige Land.",
+      "primaryMarket": "Hauptmarkt"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Häufige Fragen",
+      "subtitle": "Die wichtigsten Antworten auf einen Blick.",
+      "items": {
+        "program": {
+          "question": "Wie funktioniert das 21-Tage-Programm?",
+          "answer": "Du erhältst einen klar strukturierten Lernplan mit täglichen Lern-, Trainings- und Wiederholungsaufgaben."
+        },
+        "classes": {
+          "question": "Welche Führerscheinklassen sind verfügbar?",
+          "answer": "Express-Führerschein ist für mehrere Führerscheinklassen aufgebaut. Die verfügbaren Klassen richten sich nach dem ausgewählten Land."
+        },
+        "mobile": {
+          "question": "Kann ich auf dem Smartphone lernen?",
+          "answer": "Ja. Die Plattform ist für Smartphone, Tablet und Computer optimiert."
+        },
+        "languages": {
+          "question": "Welche Sprachen werden unterstützt?",
+          "answer": "Die Plattform ist für Deutsch, Französisch, Niederländisch, Spanisch, Italienisch und Englisch vorbereitet."
+        },
+        "exams": {
+          "question": "Wie funktionieren die Prüfungssimulationen?",
+          "answer": "Du kannst deinen Wissensstand mit Prüfungssimulationen testen und anschließend deine Fehler gezielt wiederholen."
+        },
+        "support": {
+          "question": "Wie erhalte ich Unterstützung?",
+          "answer": "Der persönliche Support begleitet dich während deiner Vorbereitung und hilft dir bei Fragen zur Plattform."
+        }
+      },
+      "viewAll": "Alle Fragen ansehen"
+    },
+    "finalCta": {
+      "title": "Bereit für deinen Führerschein?",
+      "subtitle": "Starte jetzt deine Vorbereitung mit Express-Führerschein.",
+      "button": "Jetzt starten",
+      "note": "In wenigen Minuten registriert."
+    }
+  },
+  "licenseClasses": {
+    "B": {
+      "name": "Klasse B",
+      "shortName": "B",
+      "vehicle": "PKW",
+      "imageAlt": "PKW für Führerscheinklasse B"
+    },
+    "A": {
+      "name": "Klasse A",
+      "shortName": "A",
+      "vehicle": "Motorrad",
+      "imageAlt": "Motorrad für Führerscheinklasse A"
+    },
+    "C": {
+      "name": "Klasse C",
+      "shortName": "C",
+      "vehicle": "LKW",
+      "imageAlt": "LKW für Führerscheinklasse C"
+    },
+    "D": {
+      "name": "Klasse D",
+      "shortName": "D",
+      "vehicle": "Bus",
+      "imageAlt": "Bus für Führerscheinklasse D"
+    },
+    "BE": {
+      "name": "Klasse BE",
+      "shortName": "BE",
+      "vehicle": "Anhänger",
+      "imageAlt": "PKW mit Anhänger für Führerscheinklasse BE"
+    },
+    "AM": {
+      "name": "Klasse AM",
+      "shortName": "AM",
+      "vehicle": "Roller",
+      "imageAlt": "Roller für Führerscheinklasse AM"
+    }
+  },
+  "countries": {
+    "DE": {
+      "name": "Deutschland",
+      "flag": "🇩🇪"
+    },
+    "AT": {
+      "name": "Österreich",
+      "flag": "🇦🇹"
+    },
+    "CH": {
+      "name": "Schweiz",
+      "flag": "🇨🇭"
+    },
+    "BE": {
+      "name": "Belgien",
+      "flag": "🇧🇪"
+    },
+    "ES": {
+      "name": "Spanien",
+      "flag": "🇪🇸"
+    }
+  },
+  "footer": {
+    "brandDescription": "Deine digitale Plattform für eine strukturierte Führerscheinvorbereitung.",
+    "columns": {
+      "platform": {
+        "title": "Plattform",
+        "licenseClasses": "Führerscheinklassen",
+        "learning": "Lernen",
+        "examTraining": "Prüfungstraining",
+        "program21": "21-Tage-Programm"
+      },
+      "company": {
+        "title": "Unternehmen",
+        "about": "Über uns",
+        "contact": "Kontakt",
+        "reviews": "Bewertungen",
+        "faq": "FAQ"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "imprint": "Impressum",
+        "privacy": "Datenschutz",
+        "terms": "AGB",
+        "withdrawal": "Widerrufsrecht",
+        "cookies": "Cookie-Einstellungen"
+      },
+      "countries": {
+        "title": "Länder",
+        "germany": "Deutschland",
+        "austria": "Österreich",
+        "switzerland": "Schweiz",
+        "belgium": "Belgien",
+        "spain": "Spanien"
+      }
+    },
+    "copyright": "© Express-Führerschein. Alle Rechte vorbehalten."
+  }
+}

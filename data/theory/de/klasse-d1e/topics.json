@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "training-d1e-verbindung-fahrgaeste",
+    "sortOrder": 1,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "D1E – Fahrzeugkombination und Sicherheit",
+        "description": "Vertiefendes Training zu Anhängerbetrieb hinter D1-Fahrzeugen, Verbindung, Masse, Kontrolle und besonderer Verantwortung im Personenverkehr."
+      }
+    ]
+  },
+  {
+    "slug": "training-d1e-rangieren",
+    "sortOrder": 2,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "D1E – Rangieren und Fahrverhalten",
+        "description": "Vertiefendes Training zu Rückwärtsfahren, Ausschwenken, Kurvenlauf und ruhiger Fahrzeugführung."
+      }
+    ]
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "grundstoff-persoenliche-voraussetzungen",
+    "sortOrder": 1,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Persönliche Voraussetzungen",
+        "description": "Körperliche, psychische und soziale Voraussetzungen für sicheres Fahren sowie der Einfluss von Gesundheit, Aufmerksamkeit, Alkohol, Drogen, Medikamenten, Müdigkeit und Ablenkung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-risikofaktor-mensch",
+    "sortOrder": 2,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Risikofaktor Mensch",
+        "description": "Einfluss von Stress, Angst, Aggression, Fahrfreude, Selbstüberschätzung und anderen Emotionen auf Entscheidungen im Straßenverkehr."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-rechtliche-rahmenbedingungen",
+    "sortOrder": 3,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Rechtliche Rahmenbedingungen",
+        "description": "Grundlagen zu Fahrerlaubnis, Fahrzeugzulassung, Untersuchungen, Versicherungen, Fahrzeugpapieren und internationalem Kraftfahrzeugverkehr."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-strassenverkehrssystem",
+    "sortOrder": 4,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Straßenverkehrssystem und seine Nutzung",
+        "description": "Verkehrswege, Fahrbahnen, Fahrstreifen, Sonderwege, Autobahnen, Kraftfahrstraßen, Grundregeln und systematische Gefahrenwahrnehmung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-vorfahrt-verkehrsregelungen",
+    "sortOrder": 5,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Vorfahrt und Verkehrsregelungen",
+        "description": "Sicheres Verhalten an Kreuzungen und Einmündungen sowie bei Lichtzeichen, Polizeizeichen und besonderen Verkehrslagen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-verkehrszeichen-bahnuebergaenge",
+    "sortOrder": 6,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Verkehrszeichen, Verkehrseinrichtungen und Bahnübergänge",
+        "description": "Systematik von Gefahrzeichen, Vorschriftzeichen, Richtzeichen, Zusatzzeichen und Verkehrseinrichtungen sowie sicheres Verhalten an Bahnübergängen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-andere-verkehrsteilnehmer",
+    "sortOrder": 7,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Andere Verkehrsteilnehmer",
+        "description": "Besonderheiten im Umgang mit öffentlichen Verkehrsmitteln, Bussen, Motorrädern, Radfahrern, schweren Fahrzeugen, Fußgängern, Kindern, älteren Menschen und Menschen mit Behinderung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-geschwindigkeit-abstand-umwelt",
+    "sortOrder": 8,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Geschwindigkeit, Abstand und umweltschonende Fahrweise",
+        "description": "Angepasste Geschwindigkeit, Sicherheitsabstand, Anhalteweg, Geschwindigkeitsvorschriften, vorausschauendes Fahren sowie Lärm-, Umwelt- und Energieaspekte."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-fahrmanoever-verkehrsbeobachtung",
+    "sortOrder": 9,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrmanöver und Verkehrsbeobachtung",
+        "description": "Einfahren, Anfahren, Überholen, Vorbeifahren, Ausweichen, Nebeneinanderfahren, Abbiegen, Wenden und Rückwärtsfahren."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-ruhender-verkehr",
+    "sortOrder": 10,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Ruhender Verkehr",
+        "description": "Halten, Parken, Ein- und Aussteigen, Fahrzeugsicherung sowie Absichern, Anschleppen, Abschleppen und Schleppen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-besondere-situationen-verstoesse",
+    "sortOrder": 11,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Besondere Situationen und Folgen von Verstößen",
+        "description": "Beleuchtung, Sonderfahrzeuge, Verhalten nach Unfällen, Hilfeleistung, Sanktionen, Fahreignung, Fahrerlaubnisentzug und mögliche Folgen für den Versicherungsschutz."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-lebenslanges-lernen",
+    "sortOrder": 12,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Lebenslanges Lernen",
+        "description": "Besondere Risiken von Fahranfängern, jungen und älteren Fahrern sowie Möglichkeiten zur Weiterbildung, Verhaltensverbesserung und umweltschonenden Fahrweise."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-voraussetzungen",
+    "sortOrder": 13,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Voraussetzungen für D1 und D",
+        "description": "Sicherheitsverantwortung in der Personenbeförderung sowie Arten und Verwendung von Kraftomnibussen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-rahmen-fahrwerk-elektrik",
+    "sortOrder": 14,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Rahmen, Fahrwerk und elektrische Anlage",
+        "description": "Rahmen, Fahrgestell, Federung, Räder, Reifen, Lenkung, Batterie, Beleuchtung, Heizung, Lüftung und weitere elektrische Systeme."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-fahrerplatz-innenraum",
+    "sortOrder": 15,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrerplatz und Innenraum",
+        "description": "Fahrerarbeitsplatz, Signalanlagen, Innenraum, Beleuchtung, Ein- und Ausstiege, Notausstiege und Fahrgastinformation."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-kraftstrang",
+    "sortOrder": 16,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Kraftstrang",
+        "description": "Motor, Einspritzung, Abgas, Kupplung, Getriebe, Antriebswellen und Differential bei Kraftomnibussen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-bremsanlagen-1",
+    "sortOrder": 17,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Bremsanlagen – Grundlagen",
+        "description": "Bauteile, gesetzliche Anforderungen und Arten von Bremsanlagen bei Kraftomnibussen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-bremsanlagen-2",
+    "sortOrder": 18,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Bremsanlagen – Aggregate und Feststellbremse",
+        "description": "Einzelaggregate der Bremsanlage und Funktion der Feststellbremsanlage."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-bremsanlagen-3",
+    "sortOrder": 19,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Bremsanlagen – Betriebs- und Dauerbremse",
+        "description": "Sicherer Einsatz der Betriebs- und Dauerbremsanlage."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-bremsanlagen-4",
+    "sortOrder": 20,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Bremsanlagen und Gelenkbus-Systeme",
+        "description": "Gelenkbus, Luftfederung, Knickschutz, ASR, ABS, lastabhängige Bremse sowie Anhängerbetrieb soweit für die Klasse relevant."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-personenbefoerderung-dokumente",
+    "sortOrder": 21,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Personenbeförderung und Dokumente",
+        "description": "Grundzüge des Personenbeförderungsrechts, Verkehrsarten, Fahrzeug- und Beförderungsdokumente, Haltestellen und Kennzeichnung."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-bokraft",
+    "sortOrder": 22,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Bau- und Betriebsvorschriften",
+        "description": "Betriebspflichten, Fahrgäste, Ausrüstung, Schulbuskennzeichnung, besondere Fahrgastgruppen und Verhalten im Fahrdienst."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-stvzo-kraftomnibusse",
+    "sortOrder": 23,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrzeugvorschriften für Kraftomnibusse",
+        "description": "Abmessungen, Gewichte, Sitze, Sicherheitsgurte, Türen, Notausstiege, Feuerlöscher, Erste-Hilfe-Material, Bereifung und Geschwindigkeitsbegrenzer."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-fahrphysik",
+    "sortOrder": 24,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrphysik beim Kraftomnibus",
+        "description": "Kräfte, Widerstände, Seitenführung, Kurvenfahrt und richtige Nutzung der Spiegel."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-stvo-gefahrenlehre-1",
+    "sortOrder": 25,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahren mit Kraftomnibussen – Verkehrsregeln und Gefahrenlehre I",
+        "description": "Fahrstreifen, Geschwindigkeit, Abstand, Überholen, Vorfahrt, Abbiegen, Wenden, Rückwärtsfahren, Einfahren und Anfahren."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-stvo-gefahrenlehre-2",
+    "sortOrder": 26,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahren mit Kraftomnibussen – Verkehrsregeln und Gefahrenlehre II",
+        "description": "Halten, Parken, Ein- und Aussteigen, Autobahn, Bahnübergänge, Fußgängerüberwege, Schulbusse, Haltestellen und Verkehrseinrichtungen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-wirtschaftlich-umwelt",
+    "sortOrder": 27,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Wirtschaftliches und umweltschonendes Fahren",
+        "description": "Energiesparendes Fahren, Lärmschutz, alternative Antriebe, Wartung, Entsorgung, Kartenlesen und Streckenplanung."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-pannen-unfaelle",
+    "sortOrder": 28,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Pannen, schwierige Situationen und Unfälle",
+        "description": "Seitenwind, Aquaplaning, Nebel, Wintergefahren, Schulbusbetrieb, Pannen, Evakuierung, fahrerbedingte Risiken und Unfallverhalten."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-sozialvorschriften-arbeitsrecht",
+    "sortOrder": 29,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Sozialvorschriften und Arbeitsrecht",
+        "description": "Lenk- und Ruhezeiten, Fahrtenschreiber, Fahrpersonalvorschriften, Arbeitszeit und Kontrollen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-d-sicherheitskontrollen",
+    "sortOrder": 30,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Sicherheitskontrollen",
+        "description": "Abfahrtkontrolle von Rädern, Bereifung, elektrischen Einrichtungen, Bremsanlage, Ausrüstung und weiteren sicherheitsrelevanten Bauteilen."
+      }
+    ]
+  }
+]

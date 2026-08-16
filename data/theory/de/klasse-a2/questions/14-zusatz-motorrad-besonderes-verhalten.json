@@ -1,0 +1,185 @@
+{
+  "topicSlug": "zusatz-motorrad-besonderes-verhalten",
+  "questions": [
+    {
+      "externalRef": "DE-A2-14-Q001",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 3,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Welche Aussage beschreibt einen wichtigen Sicherheitsgrundsatz im Themenbereich „Besonderes Verhalten beim Motorradfahren“?",
+          "explanation": "Zum Themenbereich „Besonderes Verhalten beim Motorradfahren“ gehört vor allem: Fahrbahnoberfläche auf Nässe, Splitt, Markierungen, Schienen, Laub, Öl und Schäden beobachten.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Fahrbahnoberfläche auf Nässe, Splitt, Markierungen, Schienen, Laub, Öl und Schäden beobachten."
+            },
+            {
+              "id": "b",
+              "text": "Die Situation erst beachten, wenn bereits eine konkrete Gefahr entstanden ist."
+            },
+            {
+              "id": "c",
+              "text": "Regeln können ignoriert werden, wenn man sich persönlich sicher fühlt."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-A2-14-Q002",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 4,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Was unterstützt beim Thema „Besonderes Verhalten beim Motorradfahren“ eine sichere und vorausschauende Entscheidung?",
+          "explanation": "Zum Themenbereich „Besonderes Verhalten beim Motorradfahren“ gehört vor allem: Sichtbarkeit aktiv verbessern und mit dem Übersehenwerden durch andere rechnen.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Sichtbarkeit aktiv verbessern und mit dem Übersehenwerden durch andere rechnen."
+            },
+            {
+              "id": "b",
+              "text": "Möglichst spät reagieren, damit der Verkehrsfluss nicht beeinträchtigt wird."
+            },
+            {
+              "id": "c",
+              "text": "Sicherheitsreserven nur dann einplanen, wenn andere Verkehrsteilnehmer Fehler machen."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-A2-14-Q003",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 3,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Welche Aussage zum Themenbereich „Besonderes Verhalten beim Motorradfahren“ ist richtig?",
+          "explanation": "Zum Themenbereich „Besonderes Verhalten beim Motorradfahren“ gehört vor allem: Blickführung und Linienwahl vorausschauend einsetzen und Sozius oder Gepäck in die Fahrweise einbeziehen.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Blickführung und Linienwahl vorausschauend einsetzen und Sozius oder Gepäck in die Fahrweise einbeziehen."
+            },
+            {
+              "id": "b",
+              "text": "Technische oder rechtliche Vorgaben sind für die praktische Fahrentscheidung ohne Bedeutung."
+            },
+            {
+              "id": "c",
+              "text": "Eine hohe eigene Fahrerfahrung macht systematische Kontrollen grundsätzlich überflüssig."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-A2-14-Q004",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 5,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "hard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Sie erkennen während der Fahrt eine unübersichtliche oder unsichere Situation zum Thema „Besonderes Verhalten beim Motorradfahren“. Wie handeln Sie grundsätzlich richtig?",
+          "explanation": "In unklaren Situationen sind frühe Beobachtung, angepasste Geschwindigkeit und ausreichende Sicherheitsreserven entscheidend.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Situation beobachten, Geschwindigkeit anpassen und nur mit ausreichender Sicherheitsreserve weiterfahren."
+            },
+            {
+              "id": "b",
+              "text": "Geschwindigkeit erhöhen, um den Gefahrenbereich schneller zu verlassen."
+            },
+            {
+              "id": "c",
+              "text": "Unverändert weiterfahren, solange noch kein anderer Verkehrsteilnehmer reagiert."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-A2-14-Q005",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 4,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Was sollten Sie beim Themenbereich „Besonderes Verhalten beim Motorradfahren“ besonders vermeiden?",
+          "explanation": "Sicheres Fahren verlangt eine ausreichende Beobachtung und Reserve. Spontane Entscheidungen ohne Überblick erhöhen das Risiko.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Entscheidungen ohne ausreichende Beobachtung oder Sicherheitsreserve."
+            },
+            {
+              "id": "b",
+              "text": "Frühzeitiges Erkennen möglicher Gefahren."
+            },
+            {
+              "id": "c",
+              "text": "Anpassen der Fahrweise an die tatsächliche Situation."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-A2-14-Q006",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 2,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "easy",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Warum ist der Themenbereich „Besonderes Verhalten beim Motorradfahren“ für die Fahrausbildung wichtig?",
+          "explanation": "Der Stoff dient dem Aufbau von Regelwissen, Gefahrenbewusstsein und sicherem Handeln im Straßenverkehr.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Weil Fehler in diesem Bereich die Verkehrssicherheit beeinträchtigen können."
+            },
+            {
+              "id": "b",
+              "text": "Weil dieser Bereich ausschließlich für die Fahrzeugpflege wichtig ist."
+            },
+            {
+              "id": "c",
+              "text": "Weil dieser Bereich nur nach bestandener Prüfung eine Rolle spielt."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    }
+  ]
+}

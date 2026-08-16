@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "training-de-verbindung-fahrgaeste",
+    "sortOrder": 1,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "DE – Fahrzeugkombination und Sicherheit",
+        "description": "Vertiefendes Training zu Anhängerbetrieb hinter Kraftomnibussen, Verbindung, Abmessungen, Kontrolle und Personenbeförderung."
+      }
+    ]
+  },
+  {
+    "slug": "training-de-rangieren-fahrverhalten",
+    "sortOrder": 2,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "DE – Rangieren und Fahrverhalten",
+        "description": "Vertiefendes Training zu Rückwärtsfahren, Kurvenlauf, Ausschwenken und sicherer Fahrzeugführung mit Bus und Anhänger."
+      }
+    ]
+  }
+]

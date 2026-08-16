@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "training-be-verbindung-beladung",
+    "sortOrder": 1,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "BE – Verbindung, Beladung und Kontrolle",
+        "description": "Vertiefendes Training zu Anhängerkupplung, Stützlast, Ladung, Abmessungen, Beleuchtung und Sicherheitskontrolle der Kombination."
+      }
+    ]
+  },
+  {
+    "slug": "training-be-rangieren-fahrverhalten",
+    "sortOrder": 2,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "BE – Rangieren und Fahrverhalten",
+        "description": "Vertiefendes Training zu Rückwärtsfahren, Rangieren, Kurvenlauf, Ausschwenken und angepasster Fahrweise mit Anhänger."
+      }
+    ]
+  }
+]

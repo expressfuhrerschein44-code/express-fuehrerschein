@@ -1,0 +1,147 @@
+/* ==========================================================================
+   Express-Führerschein — Animations
+   --------------------------------------------------------------------------
+   Animations volontairement discrètes :
+   - rapides ;
+   - fluides ;
+   - compatibles avec prefers-reduced-motion ;
+   - aucun effet décoratif excessif.
+   ========================================================================== */
+
+:root {
+  --ef-motion-fast: 160ms;
+  --ef-motion-base: 220ms;
+  --ef-motion-slow: 320ms;
+  --ef-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ef-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Fade */
+@keyframes ef-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Vertical entrance */
+@keyframes ef-slide-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Header / drawer / dropdown */
+@keyframes ef-slide-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Mobile drawer */
+@keyframes ef-drawer-in {
+  from {
+    opacity: 0;
+    transform: translate3d(24px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Very subtle pulse for small status accents only */
+@keyframes ef-soft-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.72;
+  }
+}
+
+/* Reusable utility classes */
+.ef-animate-fade-in {
+  animation: ef-fade-in var(--ef-motion-base) var(--ef-ease-out) both;
+}
+
+.ef-animate-slide-up {
+  animation: ef-slide-up var(--ef-motion-slow) var(--ef-ease-out) both;
+}
+
+.ef-animate-slide-down {
+  animation: ef-slide-down var(--ef-motion-base) var(--ef-ease-out) both;
+}
+
+.ef-animate-drawer-in {
+  animation: ef-drawer-in var(--ef-motion-slow) var(--ef-ease-out) both;
+}
+
+.ef-animate-soft-pulse {
+  animation: ef-soft-pulse 2.4s ease-in-out infinite;
+}
+
+/* Optional stagger helpers */
+.ef-delay-1 {
+  animation-delay: 60ms;
+}
+
+.ef-delay-2 {
+  animation-delay: 120ms;
+}
+
+.ef-delay-3 {
+  animation-delay: 180ms;
+}
+
+.ef-delay-4 {
+  animation-delay: 240ms;
+}
+
+/* Common interaction */
+.ef-interactive {
+  transition:
+    transform var(--ef-motion-base) var(--ef-ease-out),
+    border-color var(--ef-motion-base) var(--ef-ease-standard),
+    background-color var(--ef-motion-base) var(--ef-ease-standard),
+    color var(--ef-motion-base) var(--ef-ease-standard),
+    box-shadow var(--ef-motion-base) var(--ef-ease-out),
+    opacity var(--ef-motion-base) var(--ef-ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ef-hover-lift:hover {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Accessibility: all non-essential motion is disabled when requested. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

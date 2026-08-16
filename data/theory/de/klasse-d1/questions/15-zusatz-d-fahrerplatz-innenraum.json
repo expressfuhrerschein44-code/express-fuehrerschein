@@ -1,0 +1,185 @@
+{
+  "topicSlug": "zusatz-d-fahrerplatz-innenraum",
+  "questions": [
+    {
+      "externalRef": "DE-D1-15-Q001",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 3,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Welche Aussage beschreibt einen wichtigen Sicherheitsgrundsatz im Themenbereich „Fahrerplatz und Innenraum“?",
+          "explanation": "Zum Themenbereich „Fahrerplatz und Innenraum“ gehört vor allem: Fahrerplatz so einrichten, dass Sicht, Bedienbarkeit und Kommunikation sicher gewährleistet sind.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Fahrerplatz so einrichten, dass Sicht, Bedienbarkeit und Kommunikation sicher gewährleistet sind."
+            },
+            {
+              "id": "b",
+              "text": "Die Situation erst beachten, wenn bereits eine konkrete Gefahr entstanden ist."
+            },
+            {
+              "id": "c",
+              "text": "Regeln können ignoriert werden, wenn man sich persönlich sicher fühlt."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-D1-15-Q002",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 4,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Was unterstützt beim Thema „Fahrerplatz und Innenraum“ eine sichere und vorausschauende Entscheidung?",
+          "explanation": "Zum Themenbereich „Fahrerplatz und Innenraum“ gehört vor allem: Türen, Notausstiege und Fahrgastbereiche vor der Abfahrt kontrollieren.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Türen, Notausstiege und Fahrgastbereiche vor der Abfahrt kontrollieren."
+            },
+            {
+              "id": "b",
+              "text": "Möglichst spät reagieren, damit der Verkehrsfluss nicht beeinträchtigt wird."
+            },
+            {
+              "id": "c",
+              "text": "Sicherheitsreserven nur dann einplanen, wenn andere Verkehrsteilnehmer Fehler machen."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-D1-15-Q003",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 3,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Welche Aussage zum Themenbereich „Fahrerplatz und Innenraum“ ist richtig?",
+          "explanation": "Zum Themenbereich „Fahrerplatz und Innenraum“ gehört vor allem: Fahrgastinformationen dürfen die sichere Fahrzeugführung nicht beeinträchtigen.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Fahrgastinformationen dürfen die sichere Fahrzeugführung nicht beeinträchtigen."
+            },
+            {
+              "id": "b",
+              "text": "Technische oder rechtliche Vorgaben sind für die praktische Fahrentscheidung ohne Bedeutung."
+            },
+            {
+              "id": "c",
+              "text": "Eine hohe eigene Fahrerfahrung macht systematische Kontrollen grundsätzlich überflüssig."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-D1-15-Q004",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 5,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "hard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Sie erkennen während der Fahrt eine unübersichtliche oder unsichere Situation zum Thema „Fahrerplatz und Innenraum“. Wie handeln Sie grundsätzlich richtig?",
+          "explanation": "In unklaren Situationen sind frühe Beobachtung, angepasste Geschwindigkeit und ausreichende Sicherheitsreserven entscheidend.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Situation beobachten, Geschwindigkeit anpassen und nur mit ausreichender Sicherheitsreserve weiterfahren."
+            },
+            {
+              "id": "b",
+              "text": "Geschwindigkeit erhöhen, um den Gefahrenbereich schneller zu verlassen."
+            },
+            {
+              "id": "c",
+              "text": "Unverändert weiterfahren, solange noch kein anderer Verkehrsteilnehmer reagiert."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-D1-15-Q005",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 4,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "standard",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Was sollten Sie beim Themenbereich „Fahrerplatz und Innenraum“ besonders vermeiden?",
+          "explanation": "Sicheres Fahren verlangt eine ausreichende Beobachtung und Reserve. Spontane Entscheidungen ohne Überblick erhöhen das Risiko.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Entscheidungen ohne ausreichende Beobachtung oder Sicherheitsreserve."
+            },
+            {
+              "id": "b",
+              "text": "Frühzeitiges Erkennen möglicher Gefahren."
+            },
+            {
+              "id": "c",
+              "text": "Anpassen der Fahrweise an die tatsächliche Situation."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    },
+    {
+      "externalRef": "DE-D1-15-Q006",
+      "questionType": "SINGLE_CHOICE",
+      "penaltyPoints": 2,
+      "status": "draft",
+      "version": 1,
+      "difficulty": "easy",
+      "translations": [
+        {
+          "locale": "de",
+          "prompt": "Warum ist der Themenbereich „Fahrerplatz und Innenraum“ für die Fahrausbildung wichtig?",
+          "explanation": "Der Stoff dient dem Aufbau von Regelwissen, Gefahrenbewusstsein und sicherem Handeln im Straßenverkehr.",
+          "answerOptions": [
+            {
+              "id": "a",
+              "text": "Weil Fehler in diesem Bereich die Verkehrssicherheit beeinträchtigen können."
+            },
+            {
+              "id": "b",
+              "text": "Weil dieser Bereich ausschließlich für die Fahrzeugpflege wichtig ist."
+            },
+            {
+              "id": "c",
+              "text": "Weil dieser Bereich nur nach bestandener Prüfung eine Rolle spielt."
+            }
+          ],
+          "correctAnswer": "a"
+        }
+      ]
+    }
+  ]
+}

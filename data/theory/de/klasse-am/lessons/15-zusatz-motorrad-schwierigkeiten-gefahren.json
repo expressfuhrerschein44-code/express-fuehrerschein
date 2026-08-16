@@ -1,0 +1,175 @@
+{
+  "topicSlug": "zusatz-motorrad-schwierigkeiten-gefahren",
+  "lessons": [
+    {
+      "slug": "zusatz-motorrad-schwierigkeiten-gefahren-grundlagen",
+      "sortOrder": 1,
+      "status": "draft",
+      "estimatedDurationMinutes": 12,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Besondere Schwierigkeiten und Gefahren – Grundlagen",
+          "description": "Grundwissen und Sicherheitsprinzipien für Besondere Schwierigkeiten und Gefahren."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Lernziel",
+              "bodyText": "Typische Unfallgefahren, erschwerte Witterungs- und Sichtbedingungen, Dunkelheit, Anhänger oder Beiwagen soweit anwendbar sowie Verhalten nach Unfällen.",
+              "content": {
+                "bullets": [
+                  "Besonders mit Fehlern von Linksabbiegern, Wartepflichtigen und entgegenkommenden Fahrzeugen rechnen.",
+                  "Bei Kälte, Regen, Glätte, Nebel oder eingeschränkter Sicht Geschwindigkeit und Sicherheitsabstand deutlich anpassen.",
+                  "Nach Unfällen zuerst Folgeunfälle verhindern, Hilfe organisieren und verletzte Personen fachgerecht versorgen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "INFO",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Merke",
+              "bodyText": "Besonders mit Fehlern von Linksabbiegern, Wartepflichtigen und entgegenkommenden Fahrzeugen rechnen.",
+              "content": {
+                "bullets": [
+                  "Bei Kälte, Regen, Glätte, Nebel oder eingeschränkter Sicht Geschwindigkeit und Sicherheitsabstand deutlich anpassen.",
+                  "Nach Unfällen zuerst Folgeunfälle verhindern, Hilfe organisieren und verletzte Personen fachgerecht versorgen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "EXAMPLE",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Praxisbezug",
+              "bodyText": "Übertragen Sie die Regeln auf eine konkrete Verkehrssituation: zuerst beobachten, Risiken erkennen, Sicherheitsreserve schaffen und erst danach handeln.",
+              "content": {
+                "checklist": [
+                  "Umfeld beobachten",
+                  "Risiko einschätzen",
+                  "Geschwindigkeit und Abstand anpassen",
+                  "Entscheidung kontrolliert ausführen"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-AM-15-Q001",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Wissenscheck",
+              "bodyText": "Beantworten Sie die Frage, bevor Sie mit der nächsten Lektion fortfahren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zusatz-motorrad-schwierigkeiten-gefahren-anwendung",
+      "sortOrder": 2,
+      "status": "draft",
+      "estimatedDurationMinutes": 14,
+      "translations": [
+        {
+          "locale": "de",
+          "title": "Besondere Schwierigkeiten und Gefahren – Anwendung und Risiken",
+          "description": "Typische Risiken erkennen und Entscheidungen zum Themenbereich Besondere Schwierigkeiten und Gefahren sicher anwenden."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "TEXT",
+          "sortOrder": 1,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Sicher anwenden",
+              "bodyText": "Regelwissen ist nur dann wirksam, wenn es frühzeitig in Beobachtung und Fahrentscheidung einfließt.",
+              "content": {
+                "bullets": [
+                  "Besonders mit Fehlern von Linksabbiegern, Wartepflichtigen und entgegenkommenden Fahrzeugen rechnen.",
+                  "Bei Kälte, Regen, Glätte, Nebel oder eingeschränkter Sicht Geschwindigkeit und Sicherheitsabstand deutlich anpassen.",
+                  "Nach Unfällen zuerst Folgeunfälle verhindern, Hilfe organisieren und verletzte Personen fachgerecht versorgen."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "WARNING",
+          "sortOrder": 2,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Typischer Fehler",
+              "bodyText": "Nicht erst reagieren, wenn die Gefahr unmittelbar ist. Zu spätes Erkennen reduziert Brems-, Ausweich- und Entscheidungsreserven.",
+              "content": {
+                "avoid": [
+                  "Unaufmerksamkeit",
+                  "Zeitdruck",
+                  "zu geringe Sicherheitsreserve",
+                  "unkontrollierte spontane Manöver"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "TIP",
+          "sortOrder": 3,
+          "isActive": true,
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Prüfungs- und Praxistipp",
+              "bodyText": "Fragen Sie sich vor einer Entscheidung: Was sehe ich? Was könnte passieren? Welche Reserve brauche ich? Welche Handlung ist für alle Beteiligten am sichersten?"
+            }
+          ]
+        },
+        {
+          "type": "QUESTION",
+          "sortOrder": 4,
+          "isActive": true,
+          "questionExternalRef": "DE-AM-15-Q004",
+          "config": {
+            "required": true
+          },
+          "translations": [
+            {
+              "locale": "de",
+              "title": "Situationscheck",
+              "bodyText": "Wählen Sie die sicherste Vorgehensweise."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

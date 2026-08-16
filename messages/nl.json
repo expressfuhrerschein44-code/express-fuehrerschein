@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "locale": "nl",
+    "languageName": "Nederlands",
+    "htmlLang": "nl",
+    "direction": "ltr"
+  },
+  "seo": {
+    "home": {
+      "title": "Express-Führerschein | Rijbewijsvoorbereiding eenvoudig & digitaal",
+      "description": "Bereid je gestructureerd, snel en veilig voor op je rijbewijs met leerplan, training, proefexamens en persoonlijke begeleiding.",
+      "ogTitle": "Express-Führerschein",
+      "ogDescription": "Jouw digitale platform voor een gestructureerde rijbewijsvoorbereiding."
+    }
+  },
+  "common": {
+    "brand": "Express-Führerschein",
+    "startNow": "Nu starten",
+    "learnMore": "Meer informatie",
+    "viewAll": "Alles bekijken",
+    "continue": "Verder",
+    "back": "Terug",
+    "close": "Sluiten",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "selectLanguage": "Taal kiezen",
+    "currentLanguage": "Huidige taal",
+    "loading": "Laden…",
+    "error": "Er is iets misgegaan.",
+    "retry": "Opnieuw proberen"
+  },
+  "navigation": {
+    "licenseClasses": "Rijbewijscategorieën",
+    "process": "Werkwijze",
+    "benefits": "Voordelen",
+    "about": "Over ons",
+    "reviews": "Beoordelingen",
+    "faq": "FAQ",
+    "language": "NL",
+    "start": "Nu starten"
+  },
+  "home": {
+    "hero": {
+      "badge": "DUITSLANDS TOONAANGEVENDE ONLINE PLATFORM",
+      "title": "Jouw rijbewijs.",
+      "highlight": "Snel. Veilig. In 21 dagen.",
+      "description": "De complete voorbereiding op het theorie-examen – gestructureerd, efficiënt en betrouwbaar.",
+      "benefits": {
+        "allClasses": "Alle categorieën",
+        "online": "100% online",
+        "verifiedContent": "Gecontroleerde inhoud",
+        "personalSupport": "Persoonlijke begeleiding"
+      },
+      "primaryCta": "Nu starten",
+      "secondaryCta": "Meer informatie",
+      "primaryCtaAria": "Start met Express-Führerschein",
+      "secondaryCtaAria": "Meer over Express-Führerschein"
+    },
+    "trust": {
+      "title": "Vertrouwen door gecontroleerde kwaliteit",
+      "dekra": {
+        "name": "DEKRA",
+        "label": "Gecontroleerde kwaliteit"
+      },
+      "tuev": {
+        "name": "TÜV",
+        "label": "TÜV-gecertificeerd"
+      },
+      "kba": {
+        "name": "KBA",
+        "label": "Erkend door KBA"
+      },
+      "trustpilot": {
+        "name": "Trustpilot",
+        "rating": "4,8/5",
+        "reviews": "2.500+ beoordelingen"
+      }
+    },
+    "stats": {
+      "participants": {
+        "value": "250.000+",
+        "label": "Succesvolle deelnemers"
+      },
+      "duration": {
+        "value": "21 dagen",
+        "label": "Gemiddelde duur"
+      },
+      "successRate": {
+        "value": "98%",
+        "label": "Slagingspercentage"
+      },
+      "support": {
+        "value": "7 dagen / week",
+        "label": "Persoonlijke support"
+      }
+    },
+    "licenseClasses": {
+      "eyebrow": "RIJBEWIJSCATEGORIEËN",
+      "title": "Kies je rijbewijscategorie",
+      "subtitle": "Alle categorieën – één platform",
+      "viewAll": "Alle categorieën bekijken",
+      "selected": "Geselecteerd"
+    },
+    "whyExpress": {
+      "eyebrow": "JOUW VOORDELEN",
+      "title": "Waarom Express-Führerschein?",
+      "items": {
+        "online": {
+          "title": "100% online",
+          "description": "Leer flexibel waar je maar wilt."
+        },
+        "guarantee": {
+          "title": "Examengarantie",
+          "description": "Duidelijke voorbereiding tot de examendag."
+        },
+        "certifiedContent": {
+          "title": "Gecertificeerde inhoud",
+          "description": "Actuele en relevante leerinhoud."
+        },
+        "securePayment": {
+          "title": "Veilige betaling",
+          "description": "Beschermde en transparante betalingen."
+        },
+        "personalSupport": {
+          "title": "Persoonlijke support",
+          "description": "Ondersteuning tijdens je voorbereiding."
+        }
+      }
+    },
+    "program21": {
+      "eyebrow": "21-DAGENPROGRAMMA",
+      "title": "Jouw weg in 21 dagen",
+      "subtitle": "Een duidelijk gestructureerd leerplan voor je voorbereiding.",
+      "phases": {
+        "phase1": {
+          "days": "Dagen 1–7",
+          "title": "De basis leren",
+          "description": "Basisregels, verkeersborden en essentiële kennis."
+        },
+        "phase2": {
+          "days": "Dagen 8–14",
+          "title": "Intensief trainen",
+          "description": "Vragen, oefeningen en gerichte herhaling van fouten."
+        },
+        "phase3": {
+          "days": "Dagen 15–21",
+          "title": "Klaar voor het examen",
+          "description": "Proefexamens, gerichte herhaling en finale voorbereiding."
+        }
+      },
+      "cta": "Start het 21-dagenprogramma"
+    },
+    "howItWorks": {
+      "eyebrow": "ZO WERKT HET",
+      "title": "Eenvoudig starten. Gestructureerd leren.",
+      "subtitle": "Vier duidelijke stappen naar je voorbereiding.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Rijbewijscategorie kiezen",
+          "description": "Kies de categorie die bij jouw rijbewijs past."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Account aanmaken",
+          "description": "Registreer je in enkele stappen."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Leren & trainen",
+          "description": "Volg je leerplan en oefen gericht."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Examen voorbereiden",
+          "description": "Test je niveau met realistische proefexamens."
+        }
+      }
+    },
+    "security": {
+      "eyebrow": "VEILIGHEID",
+      "title": "Veilig. Transparant. Betrouwbaar.",
+      "subtitle": "Je gegevens en betalingen worden professioneel beschermd.",
+      "items": {
+        "gdpr": {
+          "title": "AVG-conform",
+          "description": "Gegevensbescherming volgens Europese normen."
+        },
+        "ssl": {
+          "title": "SSL-versleuteling",
+          "description": "Veilige overdracht van je gegevens."
+        },
+        "payments": {
+          "title": "Veilige betalingen",
+          "description": "Beschermde betalingsverwerking."
+        },
+        "privacy": {
+          "title": "Privacy",
+          "description": "Transparante omgang met je gegevens."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "BEOORDELINGEN",
+      "title": "Wat onze deelnemers zeggen",
+      "subtitle": "Ervaringen van deelnemers met Express-Führerschein.",
+      "viewAll": "Alle beoordelingen bekijken",
+      "empty": "Er zijn momenteel geen beoordelingen beschikbaar.",
+      "verified": "Geverifieerde beoordeling",
+      "licenseClass": "Rijbewijscategorie",
+      "country": "Land"
+    },
+    "countries": {
+      "eyebrow": "EUROPA",
+      "title": "Express-Führerschein in Europa",
+      "subtitle": "Eén platform – aangepast aan elk land.",
+      "primaryMarket": "Hoofdmarkt"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Veelgestelde vragen",
+      "subtitle": "De belangrijkste antwoorden in één oogopslag.",
+      "items": {
+        "program": {
+          "question": "Hoe werkt het 21-dagenprogramma?",
+          "answer": "Je ontvangt een gestructureerd plan met dagelijkse leer-, oefen- en herhalingsactiviteiten."
+        },
+        "classes": {
+          "question": "Welke rijbewijscategorieën zijn beschikbaar?",
+          "answer": "Express-Führerschein is gebouwd voor meerdere categorieën. De beschikbare categorieën hangen af van het gekozen land."
+        },
+        "mobile": {
+          "question": "Kan ik op mijn smartphone leren?",
+          "answer": "Ja. Het platform is geoptimaliseerd voor smartphone, tablet en computer."
+        },
+        "languages": {
+          "question": "Welke talen worden ondersteund?",
+          "answer": "Het platform is voorbereid voor Duits, Frans, Nederlands, Spaans, Italiaans en Engels."
+        },
+        "exams": {
+          "question": "Hoe werken proefexamens?",
+          "answer": "Je kunt je kennis testen met simulaties en daarna je fouten gericht herhalen."
+        },
+        "support": {
+          "question": "Hoe krijg ik ondersteuning?",
+          "answer": "Persoonlijke support begeleidt je tijdens je voorbereiding en helpt met vragen over het platform."
+        }
+      },
+      "viewAll": "Alle vragen bekijken"
+    },
+    "finalCta": {
+      "title": "Klaar voor je rijbewijs?",
+      "subtitle": "Start nu je voorbereiding met Express-Führerschein.",
+      "button": "Nu starten",
+      "note": "Binnen enkele minuten geregistreerd."
+    }
+  },
+  "licenseClasses": {
+    "B": {
+      "name": "Categorie B",
+      "shortName": "B",
+      "vehicle": "Auto",
+      "imageAlt": "Auto voor rijbewijscategorie B"
+    },
+    "A": {
+      "name": "Categorie A",
+      "shortName": "A",
+      "vehicle": "Motor",
+      "imageAlt": "Motor voor rijbewijscategorie A"
+    },
+    "C": {
+      "name": "Categorie C",
+      "shortName": "C",
+      "vehicle": "Vrachtwagen",
+      "imageAlt": "Vrachtwagen voor rijbewijscategorie C"
+    },
+    "D": {
+      "name": "Categorie D",
+      "shortName": "D",
+      "vehicle": "Bus",
+      "imageAlt": "Bus voor rijbewijscategorie D"
+    },
+    "BE": {
+      "name": "Categorie BE",
+      "shortName": "BE",
+      "vehicle": "Aanhanger",
+      "imageAlt": "Auto met aanhanger voor rijbewijscategorie BE"
+    },
+    "AM": {
+      "name": "Categorie AM",
+      "shortName": "AM",
+      "vehicle": "Scooter",
+      "imageAlt": "Scooter voor rijbewijscategorie AM"
+    }
+  },
+  "countries": {
+    "DE": {
+      "name": "Duitsland",
+      "flag": "🇩🇪"
+    },
+    "AT": {
+      "name": "Oostenrijk",
+      "flag": "🇦🇹"
+    },
+    "CH": {
+      "name": "Zwitserland",
+      "flag": "🇨🇭"
+    },
+    "BE": {
+      "name": "België",
+      "flag": "🇧🇪"
+    },
+    "ES": {
+      "name": "Spanje",
+      "flag": "🇪🇸"
+    }
+  },
+  "footer": {
+    "brandDescription": "Jouw digitale platform voor een gestructureerde rijbewijsvoorbereiding.",
+    "columns": {
+      "platform": {
+        "title": "Platform",
+        "licenseClasses": "Rijbewijscategorieën",
+        "learning": "Leren",
+        "examTraining": "Examentraining",
+        "program21": "21-dagenprogramma"
+      },
+      "company": {
+        "title": "Bedrijf",
+        "about": "Over ons",
+        "contact": "Contact",
+        "reviews": "Beoordelingen",
+        "faq": "FAQ"
+      },
+      "legal": {
+        "title": "Juridisch",
+        "imprint": "Impressum",
+        "privacy": "Privacy",
+        "terms": "Algemene voorwaarden",
+        "withdrawal": "Herroepingsrecht",
+        "cookies": "Cookie-instellingen"
+      },
+      "countries": {
+        "title": "Landen",
+        "germany": "Duitsland",
+        "austria": "Oostenrijk",
+        "switzerland": "Zwitserland",
+        "belgium": "België",
+        "spain": "Spanje"
+      }
+    },
+    "copyright": "© Express-Führerschein. Alle rechten voorbehouden."
+  }
+}

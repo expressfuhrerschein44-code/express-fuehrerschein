@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "locale": "it",
+    "languageName": "Italiano",
+    "htmlLang": "it",
+    "direction": "ltr"
+  },
+  "seo": {
+    "home": {
+      "title": "Express-Führerschein | Preparazione patente semplice e digitale",
+      "description": "Preparati alla patente in modo strutturato, rapido e sicuro con piano di studio, esercitazioni, simulazioni d’esame e supporto personale.",
+      "ogTitle": "Express-Führerschein",
+      "ogDescription": "La tua piattaforma digitale per una preparazione strutturata alla patente."
+    }
+  },
+  "common": {
+    "brand": "Express-Führerschein",
+    "startNow": "Inizia ora",
+    "learnMore": "Scopri di più",
+    "viewAll": "Vedi tutto",
+    "continue": "Continua",
+    "back": "Indietro",
+    "close": "Chiudi",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "selectLanguage": "Seleziona lingua",
+    "currentLanguage": "Lingua attuale",
+    "loading": "Caricamento…",
+    "error": "Si è verificato un errore.",
+    "retry": "Riprova"
+  },
+  "navigation": {
+    "licenseClasses": "Categorie patente",
+    "process": "Come funziona",
+    "benefits": "Vantaggi",
+    "about": "Chi siamo",
+    "reviews": "Recensioni",
+    "faq": "FAQ",
+    "language": "IT",
+    "start": "Inizia ora"
+  },
+  "home": {
+    "hero": {
+      "badge": "LA PIATTAFORMA ONLINE DI RIFERIMENTO IN GERMANIA",
+      "title": "La tua patente.",
+      "highlight": "Veloce. Sicura. In 21 giorni.",
+      "description": "Preparazione completa all’esame teorico – strutturata, efficiente e affidabile.",
+      "benefits": {
+        "allClasses": "Tutte le categorie",
+        "online": "100% online",
+        "verifiedContent": "Contenuti verificati",
+        "personalSupport": "Supporto personale"
+      },
+      "primaryCta": "Inizia ora",
+      "secondaryCta": "Scopri di più",
+      "primaryCtaAria": "Inizia con Express-Führerschein",
+      "secondaryCtaAria": "Scopri di più su Express-Führerschein"
+    },
+    "trust": {
+      "title": "Fiducia grazie alla qualità verificata",
+      "dekra": {
+        "name": "DEKRA",
+        "label": "Qualità verificata"
+      },
+      "tuev": {
+        "name": "TÜV",
+        "label": "Certificato TÜV"
+      },
+      "kba": {
+        "name": "KBA",
+        "label": "Riconosciuto da KBA"
+      },
+      "trustpilot": {
+        "name": "Trustpilot",
+        "rating": "4,8/5",
+        "reviews": "2.500+ recensioni"
+      }
+    },
+    "stats": {
+      "participants": {
+        "value": "250.000+",
+        "label": "Partecipanti di successo"
+      },
+      "duration": {
+        "value": "21 giorni",
+        "label": "Durata media"
+      },
+      "successRate": {
+        "value": "98%",
+        "label": "Tasso di superamento"
+      },
+      "support": {
+        "value": "7 giorni / settimana",
+        "label": "Supporto personale"
+      }
+    },
+    "licenseClasses": {
+      "eyebrow": "CATEGORIE PATENTE",
+      "title": "Scegli la tua categoria di patente",
+      "subtitle": "Tutte le categorie – una piattaforma",
+      "viewAll": "Vedi tutte le categorie",
+      "selected": "Selezionata"
+    },
+    "whyExpress": {
+      "eyebrow": "I TUOI VANTAGGI",
+      "title": "Perché Express-Führerschein?",
+      "items": {
+        "online": {
+          "title": "100% online",
+          "description": "Studia liberamente ovunque ti trovi."
+        },
+        "guarantee": {
+          "title": "Garanzia esame",
+          "description": "Preparazione chiara fino al giorno dell’esame."
+        },
+        "certifiedContent": {
+          "title": "Contenuti certificati",
+          "description": "Contenuti aggiornati e pertinenti."
+        },
+        "securePayment": {
+          "title": "Pagamento sicuro",
+          "description": "Pagamenti protetti e trasparenti."
+        },
+        "personalSupport": {
+          "title": "Supporto personale",
+          "description": "Assistenza durante la tua preparazione."
+        }
+      }
+    },
+    "program21": {
+      "eyebrow": "PROGRAMMA DI 21 GIORNI",
+      "title": "Il tuo percorso in 21 giorni",
+      "subtitle": "Un piano di studio chiaramente strutturato per la tua preparazione.",
+      "phases": {
+        "phase1": {
+          "days": "Giorni 1–7",
+          "title": "Impara le basi",
+          "description": "Regole, segnali e conoscenze fondamentali."
+        },
+        "phase2": {
+          "days": "Giorni 8–14",
+          "title": "Allenati intensamente",
+          "description": "Domande, esercizi e revisione mirata degli errori."
+        },
+        "phase3": {
+          "days": "Giorni 15–21",
+          "title": "Preparati all’esame",
+          "description": "Simulazioni, ripasso mirato e preparazione finale."
+        }
+      },
+      "cta": "Inizia il programma di 21 giorni"
+    },
+    "howItWorks": {
+      "eyebrow": "COME FUNZIONA",
+      "title": "Inizia facilmente. Impara con metodo.",
+      "subtitle": "Quattro passaggi chiari per la tua preparazione.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Scegli la categoria",
+          "description": "Seleziona la categoria corretta per la tua patente."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Crea un account",
+          "description": "Registrati in pochi passaggi."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Studia e allenati",
+          "description": "Segui il piano e allenati in modo mirato."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Prepara l’esame",
+          "description": "Verifica il tuo livello con simulazioni realistiche."
+        }
+      }
+    },
+    "security": {
+      "eyebrow": "SICUREZZA",
+      "title": "Sicura. Trasparente. Affidabile.",
+      "subtitle": "I tuoi dati e pagamenti sono protetti professionalmente.",
+      "items": {
+        "gdpr": {
+          "title": "Conforme al GDPR",
+          "description": "Protezione dei dati secondo standard europei."
+        },
+        "ssl": {
+          "title": "Crittografia SSL",
+          "description": "Trasmissione sicura dei tuoi dati."
+        },
+        "payments": {
+          "title": "Pagamenti sicuri",
+          "description": "Elaborazione protetta dei pagamenti."
+        },
+        "privacy": {
+          "title": "Protezione dei dati",
+          "description": "Gestione trasparente dei tuoi dati."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "RECENSIONI",
+      "title": "Cosa dicono i nostri partecipanti",
+      "subtitle": "Le esperienze dei partecipanti con Express-Führerschein.",
+      "viewAll": "Vedi tutte le recensioni",
+      "empty": "Al momento non sono disponibili recensioni.",
+      "verified": "Recensione verificata",
+      "licenseClass": "Categoria patente",
+      "country": "Paese"
+    },
+    "countries": {
+      "eyebrow": "EUROPA",
+      "title": "Express-Führerschein in Europa",
+      "subtitle": "Una piattaforma – adattata a ogni paese.",
+      "primaryMarket": "Mercato principale"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Le risposte più importanti a colpo d’occhio.",
+      "items": {
+        "program": {
+          "question": "Come funziona il programma di 21 giorni?",
+          "answer": "Ricevi un piano strutturato con attività quotidiane di studio, esercitazione e ripasso."
+        },
+        "classes": {
+          "question": "Quali categorie di patente sono disponibili?",
+          "answer": "Express-Führerschein è progettato per più categorie. Le categorie disponibili dipendono dal paese selezionato."
+        },
+        "mobile": {
+          "question": "Posso studiare dallo smartphone?",
+          "answer": "Sì. La piattaforma è ottimizzata per smartphone, tablet e computer."
+        },
+        "languages": {
+          "question": "Quali lingue sono supportate?",
+          "answer": "La piattaforma è predisposta per tedesco, francese, olandese, spagnolo, italiano e inglese."
+        },
+        "exams": {
+          "question": "Come funzionano le simulazioni d’esame?",
+          "answer": "Puoi verificare le tue conoscenze con simulazioni e poi ripassare in modo mirato gli errori."
+        },
+        "support": {
+          "question": "Come posso ricevere assistenza?",
+          "answer": "Il supporto personale ti accompagna durante la preparazione e risponde alle domande sulla piattaforma."
+        }
+      },
+      "viewAll": "Vedi tutte le domande"
+    },
+    "finalCta": {
+      "title": "Pronto per la tua patente?",
+      "subtitle": "Inizia ora la tua preparazione con Express-Führerschein.",
+      "button": "Inizia ora",
+      "note": "Registrazione in pochi minuti."
+    }
+  },
+  "licenseClasses": {
+    "B": {
+      "name": "Categoria B",
+      "shortName": "B",
+      "vehicle": "Auto",
+      "imageAlt": "Auto per la patente categoria B"
+    },
+    "A": {
+      "name": "Categoria A",
+      "shortName": "A",
+      "vehicle": "Moto",
+      "imageAlt": "Moto per la patente categoria A"
+    },
+    "C": {
+      "name": "Categoria C",
+      "shortName": "C",
+      "vehicle": "Camion",
+      "imageAlt": "Camion per la patente categoria C"
+    },
+    "D": {
+      "name": "Categoria D",
+      "shortName": "D",
+      "vehicle": "Autobus",
+      "imageAlt": "Autobus per la patente categoria D"
+    },
+    "BE": {
+      "name": "Categoria BE",
+      "shortName": "BE",
+      "vehicle": "Rimorchio",
+      "imageAlt": "Auto con rimorchio per la patente categoria BE"
+    },
+    "AM": {
+      "name": "Categoria AM",
+      "shortName": "AM",
+      "vehicle": "Scooter",
+      "imageAlt": "Scooter per la patente categoria AM"
+    }
+  },
+  "countries": {
+    "DE": {
+      "name": "Germania",
+      "flag": "🇩🇪"
+    },
+    "AT": {
+      "name": "Austria",
+      "flag": "🇦🇹"
+    },
+    "CH": {
+      "name": "Svizzera",
+      "flag": "🇨🇭"
+    },
+    "BE": {
+      "name": "Belgio",
+      "flag": "🇧🇪"
+    },
+    "ES": {
+      "name": "Spagna",
+      "flag": "🇪🇸"
+    }
+  },
+  "footer": {
+    "brandDescription": "La tua piattaforma digitale per una preparazione strutturata alla patente.",
+    "columns": {
+      "platform": {
+        "title": "Piattaforma",
+        "licenseClasses": "Categorie patente",
+        "learning": "Apprendimento",
+        "examTraining": "Preparazione esame",
+        "program21": "Programma 21 giorni"
+      },
+      "company": {
+        "title": "Azienda",
+        "about": "Chi siamo",
+        "contact": "Contatti",
+        "reviews": "Recensioni",
+        "faq": "FAQ"
+      },
+      "legal": {
+        "title": "Informazioni legali",
+        "imprint": "Note legali",
+        "privacy": "Privacy",
+        "terms": "Termini e condizioni",
+        "withdrawal": "Diritto di recesso",
+        "cookies": "Impostazioni cookie"
+      },
+      "countries": {
+        "title": "Paesi",
+        "germany": "Germania",
+        "austria": "Austria",
+        "switzerland": "Svizzera",
+        "belgium": "Belgio",
+        "spain": "Spagna"
+      }
+    },
+    "copyright": "© Express-Führerschein. Tutti i diritti riservati."
+  }
+}

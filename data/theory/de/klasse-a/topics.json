@@ -1,0 +1,194 @@
+[
+  {
+    "slug": "grundstoff-persoenliche-voraussetzungen",
+    "sortOrder": 1,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Persönliche Voraussetzungen",
+        "description": "Körperliche, psychische und soziale Voraussetzungen für sicheres Fahren sowie der Einfluss von Gesundheit, Aufmerksamkeit, Alkohol, Drogen, Medikamenten, Müdigkeit und Ablenkung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-risikofaktor-mensch",
+    "sortOrder": 2,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Risikofaktor Mensch",
+        "description": "Einfluss von Stress, Angst, Aggression, Fahrfreude, Selbstüberschätzung und anderen Emotionen auf Entscheidungen im Straßenverkehr."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-rechtliche-rahmenbedingungen",
+    "sortOrder": 3,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Rechtliche Rahmenbedingungen",
+        "description": "Grundlagen zu Fahrerlaubnis, Fahrzeugzulassung, Untersuchungen, Versicherungen, Fahrzeugpapieren und internationalem Kraftfahrzeugverkehr."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-strassenverkehrssystem",
+    "sortOrder": 4,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Straßenverkehrssystem und seine Nutzung",
+        "description": "Verkehrswege, Fahrbahnen, Fahrstreifen, Sonderwege, Autobahnen, Kraftfahrstraßen, Grundregeln und systematische Gefahrenwahrnehmung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-vorfahrt-verkehrsregelungen",
+    "sortOrder": 5,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Vorfahrt und Verkehrsregelungen",
+        "description": "Sicheres Verhalten an Kreuzungen und Einmündungen sowie bei Lichtzeichen, Polizeizeichen und besonderen Verkehrslagen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-verkehrszeichen-bahnuebergaenge",
+    "sortOrder": 6,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Verkehrszeichen, Verkehrseinrichtungen und Bahnübergänge",
+        "description": "Systematik von Gefahrzeichen, Vorschriftzeichen, Richtzeichen, Zusatzzeichen und Verkehrseinrichtungen sowie sicheres Verhalten an Bahnübergängen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-andere-verkehrsteilnehmer",
+    "sortOrder": 7,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Andere Verkehrsteilnehmer",
+        "description": "Besonderheiten im Umgang mit öffentlichen Verkehrsmitteln, Bussen, Motorrädern, Radfahrern, schweren Fahrzeugen, Fußgängern, Kindern, älteren Menschen und Menschen mit Behinderung."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-geschwindigkeit-abstand-umwelt",
+    "sortOrder": 8,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Geschwindigkeit, Abstand und umweltschonende Fahrweise",
+        "description": "Angepasste Geschwindigkeit, Sicherheitsabstand, Anhalteweg, Geschwindigkeitsvorschriften, vorausschauendes Fahren sowie Lärm-, Umwelt- und Energieaspekte."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-fahrmanoever-verkehrsbeobachtung",
+    "sortOrder": 9,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrmanöver und Verkehrsbeobachtung",
+        "description": "Einfahren, Anfahren, Überholen, Vorbeifahren, Ausweichen, Nebeneinanderfahren, Abbiegen, Wenden und Rückwärtsfahren."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-ruhender-verkehr",
+    "sortOrder": 10,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Ruhender Verkehr",
+        "description": "Halten, Parken, Ein- und Aussteigen, Fahrzeugsicherung sowie Absichern, Anschleppen, Abschleppen und Schleppen."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-besondere-situationen-verstoesse",
+    "sortOrder": 11,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Besondere Situationen und Folgen von Verstößen",
+        "description": "Beleuchtung, Sonderfahrzeuge, Verhalten nach Unfällen, Hilfeleistung, Sanktionen, Fahreignung, Fahrerlaubnisentzug und mögliche Folgen für den Versicherungsschutz."
+      }
+    ]
+  },
+  {
+    "slug": "grundstoff-lebenslanges-lernen",
+    "sortOrder": 12,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Lebenslanges Lernen",
+        "description": "Besondere Risiken von Fahranfängern, jungen und älteren Fahrern sowie Möglichkeiten zur Weiterbildung, Verhaltensverbesserung und umweltschonenden Fahrweise."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-motorrad-fahrer-beifahrer-fahrzeug",
+    "sortOrder": 13,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrer, Beifahrer und Fahrzeug",
+        "description": "Motorradspezifische persönliche Voraussetzungen, Schutzkleidung, Betriebs- und Verkehrssicherheit, Beladung, Wartung und umweltschonender Betrieb."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-motorrad-besonderes-verhalten",
+    "sortOrder": 14,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Besonderes Verhalten beim Motorradfahren",
+        "description": "Zweiradspezifische Verkehrsregeln, Fahrbahnzustand, Sichtbarkeit, Blicktechnik, Mitnahme von Personen und umweltbewusstes Fahrverhalten."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-motorrad-schwierigkeiten-gefahren",
+    "sortOrder": 15,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Besondere Schwierigkeiten und Gefahren",
+        "description": "Typische Unfallgefahren, erschwerte Witterungs- und Sichtbedingungen, Dunkelheit, Anhänger oder Beiwagen soweit anwendbar sowie Verhalten nach Unfällen."
+      }
+    ]
+  },
+  {
+    "slug": "zusatz-motorrad-fahrtechnik-fahrphysik",
+    "sortOrder": 16,
+    "isActive": true,
+    "translations": [
+      {
+        "locale": "de",
+        "title": "Fahrtechnik und Fahrphysik",
+        "description": "Stabilisierung, Kurventechnik, Blickführung, Bremsen, Ausweichen und kritische Fahrzustände bei motorisierten Zweirädern."
+      }
+    ]
+  }
+]
