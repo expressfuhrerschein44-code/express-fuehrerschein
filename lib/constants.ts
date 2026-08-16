@@ -536,7 +536,7 @@ export const ASSETS = {
       "/images/home/partners/dekra.svg",
 
     tuev:
-      "/images/home/partners/tuv.svg",
+      "/images/home/partners/tuev.svg",
 
     kba:
       "/images/home/partners/kba.svg",
