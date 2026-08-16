@@ -792,29 +792,85 @@ export async function recordTheoryQuestionOutcome(
       },
     });
 
-    const [agg, answered, total] = await Promise.all([
-      tx.user_question_progress.aggregate({
-        where: {
-          user_license_class_id: classId,
-          theory_questions: { topic_id: input.topicId },
-        },
-        _sum: { correct_count: true, incorrect_count: true },
-      }),
-      tx.user_question_progress.count({
-        where: {
-          user_license_class_id: classId,
-          attempt_count: { gt: 0 },
-          theory_questions: { topic_id: input.topicId },
-        },
-      }),
-      tx.theory_questions.count({
-        where: { topic_id: input.topicId, ...publishedQuestionWhere() },
-      }),
-    ]);
+    const topicQuestionWhere: Prisma.theory_questionsWhereInput = {
+      topic_id: input.topicId,
+      ...publishedQuestionWhere(),
+    };
 
-    const c = agg._sum.correct_count ?? 0;
-    const w = agg._sum.incorrect_count ?? 0;
-    const all = c + w;
+    const [attemptAggregate, answered, correctAnswered, total] =
+      await Promise.all([
+        tx.user_question_progress.aggregate({
+          where: {
+            user_license_class_id: classId,
+            theory_questions: topicQuestionWhere,
+          },
+          _sum: {
+            correct_count: true,
+            incorrect_count: true,
+          },
+        }),
+        tx.user_question_progress.count({
+          where: {
+            user_license_class_id: classId,
+            attempt_count: { gt: 0 },
+            theory_questions: topicQuestionWhere,
+          },
+        }),
+        tx.user_question_progress.count({
+          where: {
+            user_license_class_id: classId,
+            attempt_count: { gt: 0 },
+            last_answer_correct: true,
+            theory_questions: topicQuestionWhere,
+          },
+        }),
+        tx.theory_questions.count({
+          where: topicQuestionWhere,
+        }),
+      ]);
+
+    /**
+     * Topic-level counters describe the current state of unique questions,
+     * not the cumulative number of attempts.
+     *
+     * This keeps the database invariant coherent:
+     *
+     * answered_questions = correct_answers + incorrect_answers
+     *
+     * Retrying the same question therefore does not artificially increase
+     * the number of answered questions or break chk_user_topic_progress_counts.
+     */
+    const incorrectAnswered = Math.max(
+      0,
+      answered - correctAnswered,
+    );
+
+    /**
+     * Mastery still uses the full attempt history. This preserves the
+     * existing scoring behaviour without mixing attempt counters into
+     * the unique-question topic counters above.
+     */
+    const attemptCorrect =
+      attemptAggregate._sum.correct_count ?? 0;
+    const attemptIncorrect =
+      attemptAggregate._sum.incorrect_count ?? 0;
+    const totalAttempts =
+      attemptCorrect + attemptIncorrect;
+
+    const topicProgressData = {
+      answered_questions: answered,
+      correct_answers: correctAnswered,
+      incorrect_answers: incorrectAnswered,
+      progress_percent:
+        total > 0
+          ? pct((answered / total) * 100)
+          : 0,
+      mastery_score:
+        totalAttempts > 0
+          ? pct((attemptCorrect / totalAttempts) * 100)
+          : 0,
+      last_trained_at: new Date(),
+    } satisfies Prisma.user_topic_progressUncheckedUpdateInput;
 
     await tx.user_topic_progress.upsert({
       where: {
@@ -826,21 +882,9 @@ export async function recordTheoryQuestionOutcome(
       create: {
         user_license_class_id: classId,
         topic_id: input.topicId,
-        answered_questions: answered,
-        correct_answers: c,
-        incorrect_answers: w,
-        progress_percent: total > 0 ? pct((answered / total) * 100) : 0,
-        mastery_score: all > 0 ? pct((c / all) * 100) : 0,
-        last_trained_at: new Date(),
+        ...topicProgressData,
       },
-      update: {
-        answered_questions: answered,
-        correct_answers: c,
-        incorrect_answers: w,
-        progress_percent: total > 0 ? pct((answered / total) * 100) : 0,
-        mastery_score: all > 0 ? pct((c / all) * 100) : 0,
-        last_trained_at: new Date(),
-      },
+      update: topicProgressData,
     });
 
     if (input.trainingSessionId) {
