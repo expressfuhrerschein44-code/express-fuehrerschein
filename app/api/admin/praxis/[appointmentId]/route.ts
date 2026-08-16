@@ -9,6 +9,10 @@ import {
   mutateAdminPraxisAppointment,
 } from "@/lib/server/admin/praxis/admin-praxis-service";
 
+import {
+  getAuthPublicOrigin,
+} from "@/lib/server/auth-origin";
+
 import type {
   AdminPraxisApiResponse,
   AdminPraxisAppointmentDetailView,
@@ -40,6 +44,16 @@ const NO_STORE_HEADERS = {
     "0",
 } as const;
 
+/**
+ * Vérifie que les requêtes de mutation
+ * proviennent bien de l'origine publique
+ * officielle de l'application.
+ *
+ * On n'utilise pas request.nextUrl.host
+ * comme source de vérité en production,
+ * car l'application est derrière le
+ * reverse proxy Hostinger.
+ */
 function sameOrigin(
   request:
     NextRequest,
@@ -49,14 +63,34 @@ function sameOrigin(
       "origin",
     );
 
+  /*
+   * En production, les mutations sans
+   * Origin sont refusées.
+   *
+   * En développement local, elles restent
+   * autorisées pour faciliter les tests.
+   */
   if (!origin) {
-    return true;
+    return (
+      process.env.NODE_ENV !==
+      "production"
+    );
   }
 
   try {
+    const incomingOrigin =
+      new URL(
+        origin,
+      ).origin;
+
+    const expectedOrigin =
+      getAuthPublicOrigin(
+        request,
+      );
+
     return (
-      new URL(origin).host ===
-      request.nextUrl.host
+      incomingOrigin ===
+      expectedOrigin
     );
   } catch {
     return false;

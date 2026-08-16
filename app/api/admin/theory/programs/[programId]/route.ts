@@ -9,27 +9,50 @@ import {
   updateAdminTheoryProgram,
 } from "@/lib/server/admin/theory/admin-theory-service";
 
+import {
+  getAuthPublicOrigin,
+} from "@/lib/server/auth-origin";
+
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 const NO_STORE = {
-  "Cache-Control": "private, no-store, no-cache, must-revalidate, max-age=0",
+  "Cache-Control":
+    "private, no-store, no-cache, must-revalidate, max-age=0",
   Pragma: "no-cache",
   Expires: "0",
 } as const;
 
-function sameOrigin(request: NextRequest): boolean {
-  const origin = request.headers.get("origin");
-  if (!origin) return true;
+function sameOrigin(
+  request: NextRequest,
+): boolean {
+  const origin =
+    request.headers.get("origin");
+
+  if (!origin) {
+    return process.env.NODE_ENV !== "production";
+  }
+
   try {
-    return new URL(origin).host === request.nextUrl.host;
+    const incomingOrigin =
+      new URL(origin).origin;
+
+    const expectedOrigin =
+      getAuthPublicOrigin(request);
+
+    return (
+      incomingOrigin ===
+      expectedOrigin
+    );
   } catch {
     return false;
   }
 }
 
-function serviceError(error: AdminTheoryServiceError) {
+function serviceError(
+  error: AdminTheoryServiceError,
+) {
   return NextResponse.json(
     {
       ok: false,
@@ -45,13 +68,20 @@ function serviceError(error: AdminTheoryServiceError) {
   );
 }
 
-function unexpected(error: unknown) {
-  console.error("[Express-Führerschein] Admin Theorie API error", error);
+function unexpected(
+  error: unknown,
+) {
+  console.error(
+    "[Express-Führerschein] Admin Theorie API error",
+    error,
+  );
+
   return NextResponse.json(
     {
       ok: false,
       code: "INTERNAL_ERROR",
-      message: "Die Theoriedaten konnten gerade nicht verarbeitet werden.",
+      message:
+        "Die Theoriedaten konnten gerade nicht verarbeitet werden.",
     },
     {
       status: 500,
@@ -65,7 +95,8 @@ function invalidOrigin() {
     {
       ok: false,
       code: "INVALID_ORIGIN",
-      message: "Die Anfrage stammt von einer nicht erlaubten Quelle.",
+      message:
+        "Die Anfrage stammt von einer nicht erlaubten Quelle.",
     },
     {
       status: 403,
@@ -74,7 +105,9 @@ function invalidOrigin() {
   );
 }
 
-async function readJson(request: NextRequest): Promise<unknown> {
+async function readJson(
+  request: NextRequest,
+): Promise<unknown> {
   try {
     return await request.json();
   } catch {
@@ -87,7 +120,9 @@ async function readJson(request: NextRequest): Promise<unknown> {
 }
 
 type Context = {
-  params: Promise<{ programId: string }>;
+  params: Promise<{
+    programId: string;
+  }>;
 };
 
 export async function GET(
@@ -95,16 +130,27 @@ export async function GET(
   context: Context,
 ) {
   try {
-    const { programId } = await context.params;
+    const {
+      programId,
+    } = await context.params;
+
     const data =
-      await getAdminTheoryProgramDetail(programId);
+      await getAdminTheoryProgramDetail(
+        programId,
+      );
 
     return NextResponse.json(
-      { ok: true, data },
-      { headers: NO_STORE },
+      {
+        ok: true,
+        data,
+      },
+      {
+        headers: NO_STORE,
+      },
     );
   } catch (error) {
-    return error instanceof AdminTheoryServiceError
+    return error instanceof
+      AdminTheoryServiceError
       ? serviceError(error)
       : unexpected(error);
   }
@@ -114,10 +160,17 @@ export async function PATCH(
   request: NextRequest,
   context: Context,
 ) {
-  if (!sameOrigin(request)) return invalidOrigin();
+  if (
+    !sameOrigin(request)
+  ) {
+    return invalidOrigin();
+  }
 
   try {
-    const { programId } = await context.params;
+    const {
+      programId,
+    } = await context.params;
+
     const body =
       await readJson(request) as {
         action?: string;
@@ -132,11 +185,17 @@ export async function PATCH(
       );
 
     return NextResponse.json(
-      { ok: true, data },
-      { headers: NO_STORE },
+      {
+        ok: true,
+        data,
+      },
+      {
+        headers: NO_STORE,
+      },
     );
   } catch (error) {
-    return error instanceof AdminTheoryServiceError
+    return error instanceof
+      AdminTheoryServiceError
       ? serviceError(error)
       : unexpected(error);
   }
