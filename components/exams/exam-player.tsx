@@ -550,7 +550,12 @@ export function ExamPlayer({
         );
 
         try {
-          await saveAllPendingAnswers();
+          if (
+            reason ===
+            "manual"
+          ) {
+            await saveAllPendingAnswers();
+          }
 
           await post<FinishResponse>({
             action:

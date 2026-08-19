@@ -15,6 +15,10 @@ import {
 } from "lucide-react";
 
 import {
+  StartExamButton,
+} from "@/components/exams/start-exam-button";
+
+import {
   TheoryPage,
 } from "@/components/theory/theory-page";
 
@@ -92,9 +96,7 @@ export default async function TheoryExamPage() {
             Bisherige Ergebnisse
           </Link>
 
-          <div className="rounded-lg bg-[#F7F9FC] px-4 py-3 text-center text-[9px] font-semibold text-[#66758A]">
-            Start erfolgt über die abgesicherte Exam-API.
-          </div>
+          <StartExamButton />
         </div>
       </section>
     </div>
