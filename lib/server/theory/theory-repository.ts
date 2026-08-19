@@ -923,6 +923,24 @@ export async function findPublicTheoryQuestion(
   };
 }
 
+async function listActiveProgramTopicIds(
+  programId: string,
+  topicId?: string | null,
+): Promise<string[]> {
+  const rows = await prisma.theory_topics.findMany({
+    where: {
+      program_id: programId,
+      is_active: true,
+      ...(topicId
+        ? { id: topicId }
+        : {}),
+    },
+    select: { id: true },
+  });
+
+  return rows.map((row) => row.id);
+}
+
 export async function sampleTheoryQuestionIds(
   context: TheoryContext,
   options: {
@@ -934,53 +952,94 @@ export async function sampleTheoryQuestionIds(
 ): Promise<readonly string[]> {
   const classId = context.userLicenseClassId;
   const programId = context.programId;
-  if (!classId || !programId) return [];
 
-  const take = Math.max(1, Math.min(60, Math.round(options.questionCount ?? 10)));
-  let ids: string[] = [];
+  if (!classId || !programId) {
+    return [];
+  }
+
+  const take = Math.max(
+    1,
+    Math.min(
+      60,
+      Math.round(options.questionCount ?? 10),
+    ),
+  );
+
+  /**
+   * Resolve the active topic scope first.
+   *
+   * This deliberately avoids passing `undefined` as a Prisma scalar filter
+   * for random/quick/error/favorite sessions. It also guarantees that an
+   * optional topic belongs to the user's current published programme before
+   * any question is selected.
+   */
+  const topicIds = await listActiveProgramTopicIds(
+    programId,
+    options.topicId ?? null,
+  );
+
+  if (!topicIds.length) {
+    return [];
+  }
+
+  const questionWhere: Prisma.theory_questionsWhereInput = {
+    ...publishedQuestionWhere(),
+    topic_id: {
+      in: topicIds,
+    },
+  };
+
+  let ids: string[];
 
   if (options.onlyReview) {
     const rows = await prisma.user_question_progress.findMany({
       where: {
         user_license_class_id: classId,
         needs_review: true,
-        theory_questions: {
-          ...publishedQuestionWhere(),
-          topic_id: options.topicId ?? undefined,
-          theory_topics: { program_id: programId, is_active: true },
-        },
+        theory_questions: questionWhere,
       },
-      select: { question_id: true },
+      select: {
+        question_id: true,
+      },
     });
-    ids = rows.map((x) => x.question_id);
+
+    ids = rows.map((row) => row.question_id);
   } else if (options.onlyFavorites) {
     const rows = await prisma.theory_question_favorites.findMany({
       where: {
         user_license_class_id: classId,
-        theory_questions: {
-          ...publishedQuestionWhere(),
-          topic_id: options.topicId ?? undefined,
-          theory_topics: { program_id: programId, is_active: true },
-        },
+        theory_questions: questionWhere,
       },
-      select: { question_id: true },
+      select: {
+        question_id: true,
+      },
     });
-    ids = rows.map((x) => x.question_id);
+
+    ids = rows.map((row) => row.question_id);
   } else {
     const rows = await prisma.theory_questions.findMany({
-      where: {
-        ...publishedQuestionWhere(),
-        topic_id: options.topicId ?? undefined,
-        theory_topics: { program_id: programId, is_active: true },
+      where: questionWhere,
+      select: {
+        id: true,
       },
-      select: { id: true },
     });
-    ids = rows.map((x) => x.id);
+
+    ids = rows.map((row) => row.id);
   }
 
-  for (let i = ids.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [ids[i], ids[j]] = [ids[j], ids[i]];
+  /**
+   * Fisher-Yates shuffle keeps every eligible question equally likely while
+   * preserving the existing behaviour of returning at most `take` questions.
+   */
+  for (let index = ids.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(
+      Math.random() * (index + 1),
+    );
+
+    [ids[index], ids[randomIndex]] = [
+      ids[randomIndex],
+      ids[index],
+    ];
   }
 
   return ids.slice(0, take);
