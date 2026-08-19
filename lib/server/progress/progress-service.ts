@@ -1,8 +1,16 @@
 import "server-only";
 
 import {
+  calculateUnifiedTheoryLearningProgress,
+} from "@/lib/server/theory/learning-progress-service";
+
+import {
   getProgressRepositorySnapshot,
 } from "@/lib/server/progress/progress-repository";
+
+import type {
+  ClientShellLocale,
+} from "@/types/client-shell";
 
 import type {
   ProgressDayStatus,
@@ -71,7 +79,9 @@ function normalizeDayStatus(
     normalized ===
       "available" ||
     normalized ===
-      "unlocked"
+      "unlocked" ||
+    dayNumber <
+      currentDay
   ) {
     return "available";
   }
@@ -153,57 +163,10 @@ function buildDays(
   );
 }
 
-function localizedTopic(
-  input: {
-    translations: Array<{
-      locale: string;
-      title: string;
-      description: string | null;
-    }>;
-    preferredLocale: string;
-  },
-): {
-  title: string;
-  description: string | null;
-} {
-  const preferred =
-    input.translations.find(
-      (
-        translation,
-      ) =>
-        translation.locale ===
-        input.preferredLocale,
-    );
-
-  const german =
-    input.translations.find(
-      (
-        translation,
-      ) =>
-        translation.locale ===
-        "de",
-    );
-
-  const fallback =
-    preferred ??
-    german ??
-    input.translations[0] ??
-    null;
-
-  return {
-    title:
-      fallback?.title ??
-      "Thema",
-    description:
-      fallback?.description ??
-      null,
-  };
-}
-
 export async function getProgressPageData(
   input: {
     userId: string;
-    locale: string;
+    locale: ClientShellLocale;
   },
 ): Promise<ProgressPageData> {
   const snapshot =
@@ -226,17 +189,62 @@ export async function getProgressPageData(
     Math.max(
       0,
       Math.min(
-        TOTAL_PROGRAM_DAYS,
+        currentDay,
         snapshot.learningProgress
           ?.completed_days ??
           0,
       ),
     );
 
+  const unifiedProgress =
+    calculateUnifiedTheoryLearningProgress(
+      {
+        totalLessons:
+          snapshot.theory
+            .totalLessons,
+
+        completedLessons:
+          snapshot.theory
+            .completedLessons,
+
+        activeQuestions:
+          snapshot.theory
+            .totalQuestions,
+
+        uniqueQuestionsAnswered:
+          snapshot.theory
+            .answeredQuestions,
+
+        topicProgressPercents:
+          snapshot.topics.map(
+            (
+              topic,
+            ) =>
+              topic
+                .progressPercent,
+          ),
+
+        completedExamCount:
+          snapshot.exam
+            .completedAttempts,
+
+        currentDay,
+
+        completedDays,
+
+        lastActivityAt:
+          snapshot.learningProgress
+            ?.last_activity_at ??
+          null,
+      },
+    );
+
   const days =
     buildDays({
-      currentDay,
-      completedDays,
+      currentDay:
+        unifiedProgress.currentDay,
+      completedDays:
+        unifiedProgress.completedDays,
       storedDays:
         snapshot.learningDays,
     });
@@ -257,62 +265,50 @@ export async function getProgressPageData(
         snapshot.theory
           .totalLessons,
       ),
+
     completedLessons:
       Math.max(
         0,
         snapshot.theory
           .completedLessons,
       ),
+
     lessonCompletionPercent:
-      snapshot.theory
-        .totalLessons > 0
-        ? pct(
-            (
-              snapshot.theory
-                .completedLessons /
-              snapshot.theory
-                .totalLessons
-            ) *
-              100,
-          )
-        : 0,
+      unifiedProgress
+        .lessonCompletionPercent,
+
     totalQuestions:
       Math.max(
         0,
         snapshot.theory
           .totalQuestions,
       ),
+
     answeredQuestions:
       Math.max(
         0,
         snapshot.theory
           .answeredQuestions,
       ),
+
     questionCoveragePercent:
-      snapshot.theory
-        .totalQuestions > 0
-        ? pct(
-            (
-              snapshot.theory
-                .answeredQuestions /
-              snapshot.theory
-                .totalQuestions
-            ) *
-              100,
-          )
-        : 0,
+      unifiedProgress
+        .questionCoveragePercent,
+
     correctAttempts:
       Math.max(
         0,
         snapshot.theory
           .correctAttempts,
       ),
+
     incorrectAttempts:
       Math.max(
         0,
         snapshot.theory
           .incorrectAttempts,
       ),
+
     accuracyPercent:
       totalAttempts > 0
         ? pct(
@@ -324,6 +320,7 @@ export async function getProgressPageData(
               100,
           )
         : 0,
+
     needsReviewCount:
       Math.max(
         0,
@@ -339,12 +336,14 @@ export async function getProgressPageData(
         snapshot.training
           .completedSessions,
       ),
+
     totalQuestionsAnswered:
       Math.max(
         0,
         snapshot.training
           .totalQuestionsAnswered,
       ),
+
     totalDurationMinutes:
       Math.floor(
         Math.max(
@@ -354,6 +353,7 @@ export async function getProgressPageData(
         ) /
           60,
       ),
+
     averageScorePercent:
       snapshot.training
         .scoredSessions > 0
@@ -364,11 +364,13 @@ export async function getProgressPageData(
                 .scoredSessions,
           )
         : null,
+
     lastTrainingAt:
       snapshot.training
         .lastTrainingAt
         ?.toISOString() ??
       null,
+
     lastScorePercent:
       snapshot.training
         .lastScorePercent ??
@@ -382,18 +384,21 @@ export async function getProgressPageData(
         snapshot.exam
           .completedAttempts,
       ),
+
     passedAttempts:
       Math.max(
         0,
         snapshot.exam
           .passedAttempts,
       ),
+
     failedAttempts:
       Math.max(
         0,
         snapshot.exam
           .failedAttempts,
       ),
+
     passRatePercent:
       snapshot.exam
         .completedAttempts > 0
@@ -407,6 +412,7 @@ export async function getProgressPageData(
               100,
           )
         : null,
+
     averageScorePercent:
       snapshot.exam
         .scoredAttempts > 0
@@ -417,15 +423,18 @@ export async function getProgressPageData(
                 .scoredAttempts,
           )
         : null,
+
     lastAttemptAt:
       snapshot.exam
         .lastAttemptAt
         ?.toISOString() ??
       null,
+
     lastScorePercent:
       snapshot.exam
         .lastScorePercent ??
       null,
+
     lastAttemptPassed:
       snapshot.exam
         .lastAttemptPassed,
@@ -436,106 +445,107 @@ export async function getProgressPageData(
     snapshot.topics.map(
       (
         topic,
-      ) => {
-        const translation =
-          localizedTopic({
-            translations:
-              topic.translations,
-            preferredLocale:
-              input.locale,
-          });
+      ) => ({
+        id:
+          topic.id,
 
-        const progress =
-          topic.user_progress[0] ??
-          null;
+        slug:
+          topic.slug,
 
-        return {
-          id:
-            topic.id,
-          slug:
-            topic.slug,
-          title:
-            translation.title,
-          description:
-            translation.description,
-          questionCount:
-            Math.max(
-              0,
-              topic._count
-                .questions,
-            ),
-          answeredQuestions:
-            Math.max(
-              0,
-              progress
-                ?.answered_questions ??
-                0,
-            ),
-          correctAnswers:
-            Math.max(
-              0,
-              progress
-                ?.correct_answers ??
-                0,
-            ),
-          incorrectAnswers:
-            Math.max(
-              0,
-              progress
-                ?.incorrect_answers ??
-                0,
-            ),
-          progressPercent:
-            pct(
-              progress
-                ?.progress_percent ??
-                0,
-            ),
-          masteryScore:
-            pct(
-              progress
-                ?.mastery_score ??
-                0,
-            ),
-          lastTrainedAt:
-            progress
-              ?.last_trained_at
-              ?.toISOString() ??
-            null,
-        };
-      },
+        title:
+          topic.title,
+
+        description:
+          topic.description,
+
+        questionCount:
+          Math.max(
+            0,
+            topic.questionCount,
+          ),
+
+        answeredQuestions:
+          Math.max(
+            0,
+            topic.answeredQuestions,
+          ),
+
+        correctAnswers:
+          Math.max(
+            0,
+            topic.correctAnswers,
+          ),
+
+        incorrectAnswers:
+          Math.max(
+            0,
+            topic.incorrectAnswers,
+          ),
+
+        progressPercent:
+          pct(
+            topic.progressPercent,
+          ),
+
+        masteryScore:
+          pct(
+            topic.masteryScore,
+          ),
+
+        lastTrainedAt:
+          topic.lastTrainedAt
+            ?.toISOString() ??
+          null,
+      }),
     );
 
   const base = {
     licenseClassCode:
       snapshot.context
         .licenseClassCode,
+
     overview: {
-      currentDay,
+      overallProgressPercent:
+        unifiedProgress
+          .overallPercent,
+
+      currentDay:
+        unifiedProgress
+          .currentDay,
+
       totalDays:
         TOTAL_PROGRAM_DAYS,
-      completedDays,
+
+      completedDays:
+        unifiedProgress
+          .completedDays,
+
       totalStudyMinutes:
         Math.max(
           0,
           snapshot.learningProgress
             ?.total_study_minutes ??
-            0,
+          0,
         ),
+
       answeredQuestions:
-        theory.answeredQuestions,
+        theory
+          .answeredQuestions,
+
       readinessScore:
         pct(
           snapshot.learningProgress
             ?.readiness_score ??
-            0,
+          0,
         ),
+
       lastActivityAt:
         snapshot.learningProgress
           ?.last_activity_at
           ?.toISOString() ??
         null,
     },
+
     days,
     theory,
     training,

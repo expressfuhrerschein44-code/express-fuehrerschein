@@ -3,6 +3,7 @@ import {
   Clock3,
   FileQuestion,
   Gauge,
+  TrendingUp,
 } from "lucide-react";
 
 import type {
@@ -18,6 +19,16 @@ export function ProgressOverview({
   overview,
 }: ProgressOverviewProps) {
   const items = [
+    {
+      id:
+        "progress",
+      label:
+        "Gesamtfortschritt",
+      value:
+        `${overview.overallProgressPercent} %`,
+      icon:
+        TrendingUp,
+    },
     {
       id:
         "day",
@@ -65,7 +76,7 @@ export function ProgressOverview({
   return (
     <section
       aria-label="Fortschrittsübersicht"
-      className="grid grid-cols-2 gap-3 lg:grid-cols-4"
+      className="grid grid-cols-2 gap-3 lg:grid-cols-5"
     >
       {items.map(
         (

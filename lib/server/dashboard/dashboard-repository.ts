@@ -169,6 +169,14 @@ export interface DashboardRepositoryQuestionStats {
     number;
 }
 
+export interface DashboardRepositoryLessonStats {
+  totalLessons:
+    number;
+
+  completedLessons:
+    number;
+}
+
 export interface DashboardRepositoryExamStats {
   completed:
     number;
@@ -273,6 +281,9 @@ export interface DashboardRepositorySnapshot {
 
   topics:
     readonly DashboardRepositoryTopic[];
+
+  lessonStats:
+    DashboardRepositoryLessonStats;
 
   questionStats:
     DashboardRepositoryQuestionStats;
@@ -553,6 +564,12 @@ async function getDashboardTheoryScopedData(
       activeQuestions:
         0,
 
+      totalLessons:
+        0,
+
+      completedLessons:
+        0,
+
       completedExams:
         0,
 
@@ -620,6 +637,8 @@ async function getDashboardTheoryScopedData(
     uniqueQuestionsAnswered,
     needsReview,
     activeQuestions,
+    totalLessons,
+    completedLessons,
     completedExams,
     passedExams,
     examScoreAggregate,
@@ -759,6 +778,38 @@ async function getDashboardTheoryScopedData(
         }),
 
       prisma
+        .theory_lessons
+        .count({
+          where: {
+            status:
+              "published",
+
+            theory_topics:
+              topicWhere,
+          },
+        }),
+
+      prisma
+        .user_lesson_progress
+        .count({
+          where: {
+            user_license_class_id:
+              classId,
+
+            completed:
+              true,
+
+            theory_lessons: {
+              status:
+                "published",
+
+              theory_topics:
+                topicWhere,
+            },
+          },
+        }),
+
+      prisma
         .exam_attempts
         .count({
           where:
@@ -891,6 +942,8 @@ async function getDashboardTheoryScopedData(
     uniqueQuestionsAnswered,
     needsReview,
     activeQuestions,
+    totalLessons,
+    completedLessons,
     completedExams,
     passedExams,
     examScoreAggregate,
@@ -1146,6 +1199,14 @@ export async function getDashboardRepositorySnapshot(
       topics:
         [],
 
+      lessonStats: {
+        totalLessons:
+          0,
+
+        completedLessons:
+          0,
+      },
+
       questionStats: {
         totalAttempts:
           0,
@@ -1372,6 +1433,8 @@ export async function getDashboardRepositorySnapshot(
     uniqueQuestionsAnswered,
     needsReview,
     activeQuestions,
+    totalLessons,
+    completedLessons,
     completedExams,
     passedExams,
     examScoreAggregate,
@@ -1524,6 +1587,12 @@ export async function getDashboardRepositorySnapshot(
           };
         },
       ),
+
+    lessonStats: {
+      totalLessons,
+
+      completedLessons,
+    },
 
     questionStats: {
       totalAttempts:

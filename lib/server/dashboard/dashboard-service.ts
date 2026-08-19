@@ -30,11 +30,14 @@ import {
   calculateAccuracyPercent,
   calculateDerivedReadinessPercent,
   calculateExamPassRatePercent,
-  calculateOverallProgressPercent,
   calculateRemainingProgramDays,
   clampNumber,
   roundPercent,
 } from "@/lib/server/dashboard/dashboard-metrics";
+
+import {
+  calculateUnifiedTheoryLearningProgress,
+} from "@/lib/server/theory/learning-progress-service";
 
 import {
   DashboardServiceError,
@@ -133,6 +136,78 @@ function pickTranslation(
   );
 }
 
+/**
+ * The licence-class start date is the source of truth for the calendar
+ * position inside the 21-day programme.
+ *
+ * UTC calendar days are used to avoid DST/timezone shifts changing
+ * the perceived programme day.
+ */
+function utcCalendarDay(
+  value:
+    Date,
+): number {
+  return Date.UTC(
+    value.getUTCFullYear(),
+    value.getUTCMonth(),
+    value.getUTCDate(),
+  );
+}
+
+function deriveDashboardProgramDay(
+  startedAt:
+    Date,
+  now =
+    new Date(),
+): number {
+  const millisecondsPerDay =
+    86_400_000;
+
+  const elapsedDays =
+    Math.floor(
+      (
+        utcCalendarDay(
+          now,
+        ) -
+        utcCalendarDay(
+          startedAt,
+        )
+      ) /
+        millisecondsPerDay,
+    );
+
+  return Math.max(
+    1,
+    Math.min(
+      DASHBOARD_PROGRAM_DAYS,
+      elapsedDays +
+        1,
+    ),
+  );
+}
+
+function plannedDashboardProgramDate(
+  startedAt:
+    Date,
+  dayNumber:
+    number,
+): Date {
+  const date =
+    new Date(
+      utcCalendarDay(
+        startedAt,
+      ),
+    );
+
+  date.setUTCDate(
+    date.getUTCDate() +
+      dayNumber -
+      1,
+  );
+
+  return date;
+}
+
 function buildProgramDays(
   currentDay:
     number,
@@ -160,6 +235,9 @@ function buildProgramDays(
       score:
         number | null;
     }[],
+
+  programStartedAt:
+    Date | null,
 ): readonly DashboardProgramDay[] {
   const safeCurrentDay =
     Math.round(
@@ -207,23 +285,46 @@ function buildProgramDays(
        */
       const fallbackStatus:
         DashboardProgramDayStatus =
-        dayNumber <
+        dayNumber <=
         safeCurrentDay
-          ? "locked"
-          : dayNumber ===
-              safeCurrentDay
-            ? "available"
-            : "locked";
+          ? "available"
+          : "locked";
+
+      const storedStatus =
+        stored
+          ? normalizeProgramDayStatus(
+              stored.status,
+            )
+          : null;
+
+      /**
+       * Mirror the Theorie calendar behavior without performing writes here:
+       * an already-reached day cannot remain visually locked.
+       *
+       * Completed / in-progress / skipped states are preserved.
+       */
+      const status:
+        DashboardProgramDayStatus =
+        storedStatus ===
+          "locked" &&
+        dayNumber <=
+          safeCurrentDay
+          ? "available"
+          : storedStatus ??
+            fallbackStatus;
+
+      const fallbackPlannedDate =
+        programStartedAt
+          ? plannedDashboardProgramDate(
+              programStartedAt,
+              dayNumber,
+            )
+          : null;
 
       return {
         dayNumber,
 
-        status:
-          stored
-            ? normalizeProgramDayStatus(
-                stored.status,
-              )
-            : fallbackStatus,
+        status,
 
         isCurrent:
           dayNumber ===
@@ -232,7 +333,8 @@ function buildProgramDays(
         plannedDate:
           iso(
             stored
-              ?.plannedDate,
+              ?.plannedDate ??
+            fallbackPlannedDate,
           ),
 
         startedAt:
@@ -524,7 +626,24 @@ export async function getDashboardData():
       snapshot
         .learningProgress;
 
-    const currentDay =
+    /**
+     * Keep the 21-day calendar independent from the learning percentage.
+     *
+     * The licence-class start date is the calendar source of truth.
+     * Persisted values are still respected monotonically so completed
+     * programme state is never moved backwards.
+     */
+    const derivedCurrentDay =
+      snapshot
+        .licenseClass
+        ? deriveDashboardProgramDay(
+            snapshot
+              .licenseClass
+              .startedAt,
+          )
+        : 1;
+
+    const storedCurrentDay =
       Math.round(
         clampNumber(
           learning
@@ -535,7 +654,7 @@ export async function getDashboardData():
         ),
       );
 
-    const completedDays =
+    const storedCompletedDays =
       Math.round(
         clampNumber(
           learning
@@ -546,17 +665,105 @@ export async function getDashboardData():
         ),
       );
 
-    const overallProgressPercent =
-      calculateOverallProgressPercent(
-        completedDays,
-        topics.map(
+    const completedProgramRows =
+      snapshot
+        .programDays
+        .filter(
           (
-            topic,
+            day,
           ) =>
-            topic
-              .progressPercent,
+            day.status ===
+              "completed" ||
+            day.completedAt !==
+              null,
+        )
+        .length;
+
+    const currentDay =
+      Math.round(
+        clampNumber(
+          Math.max(
+            derivedCurrentDay,
+            storedCurrentDay,
+            storedCompletedDays,
+          ),
+          1,
+          DASHBOARD_PROGRAM_DAYS,
         ),
       );
+
+    const completedDays =
+      Math.round(
+        clampNumber(
+          Math.max(
+            storedCompletedDays,
+            completedProgramRows,
+          ),
+          0,
+          currentDay,
+        ),
+      );
+
+    /**
+     * IMPORTANT:
+     * This is the same canonical learning-progress engine used by /theorie.
+     *
+     * 30% lessons
+     * 30% unique question coverage
+     * 25% topic progress
+     * 15% completed mock-exam activity
+     */
+    const theoryProgress =
+      calculateUnifiedTheoryLearningProgress(
+        {
+          totalLessons:
+            snapshot
+              .lessonStats
+              .totalLessons,
+
+          completedLessons:
+            snapshot
+              .lessonStats
+              .completedLessons,
+
+          activeQuestions:
+            snapshot
+              .questionStats
+              .activeQuestions,
+
+          uniqueQuestionsAnswered:
+            snapshot
+              .questionStats
+              .uniqueQuestionsAnswered,
+
+          topicProgressPercents:
+            topics.map(
+              (
+                topic,
+              ) =>
+                topic
+                  .progressPercent,
+            ),
+
+          completedExamCount:
+            snapshot
+              .examStats
+              .completed,
+
+          currentDay,
+
+          completedDays,
+
+          lastActivityAt:
+            learning
+              ?.lastActivityAt ??
+            null,
+        },
+      );
+
+    const overallProgressPercent =
+      theoryProgress
+        .overallPercent;
 
     const answerStats =
       snapshot
@@ -897,6 +1104,10 @@ export async function getDashboardData():
             currentDay,
             snapshot
               .programDays,
+            snapshot
+              .licenseClass
+              ?.startedAt ??
+              null,
           ),
       },
 

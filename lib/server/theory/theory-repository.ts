@@ -15,6 +15,13 @@ export interface TheoryContext {
   programId: string | null;
   programCode: string | null;
   programVersion: string | null;
+  /**
+   * Start of the user's current licence-class preparation.
+   *
+   * Optional on the public context type for backwards compatibility with
+   * existing callers/tests that may build TheoryContext objects manually.
+   */
+  licenseClassStartedAt?: Date | null;
 }
 
 export interface TheoryRepositoryTopic {
@@ -96,6 +103,12 @@ export interface TheoryOverviewRepositorySnapshot {
   questionStats: TheoryRepositoryQuestionStats;
   recentTraining: readonly TheoryRepositoryTraining[];
   recentExams: readonly TheoryRepositoryExamAttempt[];
+  /**
+   * Full aggregates are kept separately from the limited "recent" lists so
+   * totals never depend on the last 10 rows only.
+   */
+  totalPracticeSeconds?: number;
+  completedExamCount?: number;
 }
 
 export interface TheoryQuestionForAnswer {
@@ -237,6 +250,43 @@ function today(): Date {
   return new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate()));
 }
 
+export const THEORY_PROGRAM_DAYS = 21;
+
+function clampProgramDay(value: number): number {
+  if (!Number.isFinite(value)) return 1;
+  return Math.max(1, Math.min(THEORY_PROGRAM_DAYS, Math.round(value)));
+}
+
+/**
+ * The licence-class start timestamp is the source of truth for the calendar
+ * position inside the 21-day programme.
+ *
+ * We compare UTC calendar days instead of raw elapsed milliseconds so DST
+ * changes cannot turn one calendar day into day 1 again.
+ */
+function utcCalendarDay(value: Date): number {
+  return Date.UTC(
+    value.getUTCFullYear(),
+    value.getUTCMonth(),
+    value.getUTCDate(),
+  );
+}
+
+function deriveProgramDay(startedAt: Date, now = new Date()): number {
+  const millisecondsPerDay = 86_400_000;
+  const elapsedDays = Math.floor(
+    (utcCalendarDay(now) - utcCalendarDay(startedAt)) / millisecondsPerDay,
+  );
+
+  return clampProgramDay(elapsedDays + 1);
+}
+
+function plannedProgramDate(startedAt: Date, dayNumber: number): Date {
+  const base = new Date(utcCalendarDay(startedAt));
+  base.setUTCDate(base.getUTCDate() + dayNumber - 1);
+  return base;
+}
+
 function locales(locale: ClientShellLocale): ClientShellLocale[] {
   return locale === "de" ? ["de"] : [locale, "de"];
 }
@@ -309,7 +359,7 @@ export async function getTheoryContextForUser(
     prisma.user_license_classes.findFirst({
       where: { user_id: id, status: { not: "archived" } },
       orderBy: [{ is_primary: "desc" }, { created_at: "asc" }],
-      select: { id: true, license_class_code: true },
+      select: { id: true, license_class_code: true, started_at: true },
     }),
   ]);
 
@@ -326,6 +376,7 @@ export async function getTheoryContextForUser(
       programId: null,
       programCode: null,
       programVersion: null,
+      licenseClassStartedAt: null,
     };
   }
 
@@ -340,6 +391,141 @@ export async function getTheoryContextForUser(
     programId: program?.id ?? null,
     programCode: program?.code ?? null,
     programVersion: program?.version ?? null,
+    licenseClassStartedAt: licenseClass.started_at,
+  };
+}
+
+/**
+ * Keeps the persisted 21-day calendar in sync with the licence-class start
+ * date without altering completed/in-progress/skipped day states.
+ *
+ * - current_day advances automatically with calendar days;
+ * - already reached locked days become available;
+ * - future days remain locked when they are created;
+ * - completed day states are never downgraded;
+ * - completed_days stays monotonic and is reconciled with persisted day rows.
+ */
+export async function syncTheoryProgramTimeline(
+  context: TheoryContext,
+  now = new Date(),
+): Promise<{
+  currentDay: number;
+  completedDays: number;
+}> {
+  const classId = context.userLicenseClassId;
+
+  if (!classId) {
+    return {
+      currentDay: 1,
+      completedDays: 0,
+    };
+  }
+
+  let startedAt = context.licenseClassStartedAt ?? null;
+
+  if (!startedAt) {
+    const licenseClass = await prisma.user_license_classes.findUnique({
+      where: { id: classId },
+      select: { started_at: true },
+    });
+
+    startedAt = licenseClass?.started_at ?? null;
+  }
+
+  if (!startedAt) {
+    const existing = await prisma.learning_progress.findUnique({
+      where: { user_license_class_id: classId },
+      select: { current_day: true, completed_days: true },
+    });
+
+    return {
+      currentDay: clampProgramDay(existing?.current_day ?? 1),
+      completedDays: Math.max(
+        0,
+        Math.min(THEORY_PROGRAM_DAYS, existing?.completed_days ?? 0),
+      ),
+    };
+  }
+
+  const existingLearning = await prisma.learning_progress.findUnique({
+    where: { user_license_class_id: classId },
+    select: { current_day: true, completed_days: true },
+  });
+
+  const derivedDay = deriveProgramDay(startedAt, now);
+  const storedCurrentDay = clampProgramDay(existingLearning?.current_day ?? 1);
+  const storedCompletedDays = Math.max(
+    0,
+    Math.min(THEORY_PROGRAM_DAYS, existingLearning?.completed_days ?? 0),
+  );
+
+  const currentDay = clampProgramDay(
+    Math.max(derivedDay, storedCurrentDay, storedCompletedDays),
+  );
+
+  await prisma.learning_days.createMany({
+    data: Array.from(
+      { length: THEORY_PROGRAM_DAYS },
+      (_, index) => {
+        const dayNumber = index + 1;
+
+        return {
+          user_license_class_id: classId,
+          day_number: dayNumber,
+          status: dayNumber <= currentDay ? "available" : "locked",
+          planned_date: plannedProgramDate(startedAt!, dayNumber),
+        };
+      },
+    ),
+    skipDuplicates: true,
+  });
+
+  /**
+   * Only unlock rows that are still explicitly locked.
+   * Existing completed/in_progress/skipped rows are deliberately preserved.
+   */
+  await prisma.learning_days.updateMany({
+    where: {
+      user_license_class_id: classId,
+      day_number: { lte: currentDay },
+      status: "locked",
+    },
+    data: {
+      status: "available",
+    },
+  });
+
+  const completedRows = await prisma.learning_days.count({
+    where: {
+      user_license_class_id: classId,
+      OR: [
+        { status: "completed" },
+        { completed_at: { not: null } },
+      ],
+    },
+  });
+
+  const completedDays = Math.min(
+    currentDay,
+    Math.max(storedCompletedDays, completedRows),
+  );
+
+  await prisma.learning_progress.upsert({
+    where: { user_license_class_id: classId },
+    create: {
+      user_license_class_id: classId,
+      current_day: currentDay,
+      completed_days: completedDays,
+    },
+    update: {
+      current_day: currentDay,
+      completed_days: completedDays,
+    },
+  });
+
+  return {
+    currentDay,
+    completedDays,
   };
 }
 
@@ -351,7 +537,7 @@ export async function getTheoryOverviewRepositorySnapshot(
   const classId = context.userLicenseClassId;
   const programId = context.programId;
 
-  if (!classId || !programId) {
+  if (!classId) {
     return {
       context,
       learningProgress: null,
@@ -364,6 +550,50 @@ export async function getTheoryOverviewRepositorySnapshot(
       },
       recentTraining: [],
       recentExams: [],
+      totalPracticeSeconds: 0,
+      completedExamCount: 0,
+    };
+  }
+
+  /**
+   * Synchronize the calendar before reading the snapshot so both Theorie and
+   * every consumer of learning_progress immediately see the real programme day.
+   */
+  await syncTheoryProgramTimeline(context);
+
+  if (!programId) {
+    const learning = await prisma.learning_progress.findUnique({
+      where: { user_license_class_id: classId },
+      select: {
+        current_day: true, completed_days: true, completed_lessons: true,
+        answered_questions: true, correct_answers: true, readiness_score: true,
+        total_study_minutes: true, last_activity_at: true,
+      },
+    });
+
+    return {
+      context,
+      learningProgress: learning ? {
+        currentDay: learning.current_day,
+        completedDays: learning.completed_days,
+        completedLessons: learning.completed_lessons,
+        answeredQuestions: learning.answered_questions,
+        correctAnswers: learning.correct_answers,
+        readinessScore: learning.readiness_score,
+        totalStudyMinutes: learning.total_study_minutes,
+        lastActivityAt: learning.last_activity_at,
+      } : null,
+      lessonStats: { totalLessons: 0, startedLessons: 0, completedLessons: 0, activeStudySeconds: 0 },
+      topics: [],
+      questionStats: {
+        totalAttempts: 0, correctAttempts: 0, incorrectAttempts: 0,
+        uniqueQuestionsAnswered: 0, questionsToReview: 0,
+        masteredQuestions: 0, activeQuestions: 0,
+      },
+      recentTraining: [],
+      recentExams: [],
+      totalPracticeSeconds: 0,
+      completedExamCount: 0,
     };
   }
 
@@ -382,6 +612,8 @@ export async function getTheoryOverviewRepositorySnapshot(
     startedLessons,
     completedLessons,
     studyAgg,
+    practiceAgg,
+    completedExamCount,
     recentTraining,
     recentExams,
   ] = await Promise.all([
@@ -467,6 +699,23 @@ export async function getTheoryOverviewRepositorySnapshot(
     prisma.theory_study_sessions.aggregate({
       where: { user_license_class_id: classId },
       _sum: { active_seconds: true },
+    }),
+    prisma.training_sessions.aggregate({
+      where: {
+        user_license_class_id: classId,
+        completed_at: { not: null },
+      },
+      _sum: { duration_seconds: true },
+    }),
+    prisma.exam_attempts.count({
+      where: {
+        user_license_class_id: classId,
+        status: "completed",
+        OR: [
+          { exam_configuration_id: null },
+          { exam_configurations: { program_id: programId } },
+        ],
+      },
     }),
     prisma.training_sessions.findMany({
       where: {
@@ -578,6 +827,8 @@ export async function getTheoryOverviewRepositorySnapshot(
       startedAt: e.started_at,
       completedAt: e.completed_at,
     })),
+    totalPracticeSeconds: practiceAgg._sum.duration_seconds ?? 0,
+    completedExamCount,
   };
 }
 
